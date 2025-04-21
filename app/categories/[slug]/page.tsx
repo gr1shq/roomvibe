@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import type { Metadata } from 'next';
 import categories from '../../../data/categories.json'
 import products from '../../../data/products_list.json'
 import ItemCard from '@/app/(components)/ItemCard'
