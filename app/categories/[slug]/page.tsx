@@ -17,11 +17,16 @@ interface Category {
       accent: string
     }
 }
-interface CategoryPageParams {
-    slug: string
+
+interface Product {
+    id: number
+    name: string
+    category: string
+    price: string
+    image: string
+    affiliateLinkAmazon: string
+    affiliateLinkTemu: string
 }
-
-
 
 export async function generateStaticParams() {
     return categories.map((category: Category) => ({
@@ -29,15 +34,16 @@ export async function generateStaticParams() {
     }))
 }
 
-const page = ({params}: {params:  CategoryPageParams}) => {
+export default function CategoryPage({ params }: { params: { slug: string } }) {
+    const category = categories.find((category: Category) => category.slug === params.slug)
+    
+    if (!category) {
+        notFound()
+    }
 
-    const category = categories.find((category: Category) => category.slug === params.slug) as Category | undefined
+    const allProducts = products.filter((product: Product) => product.category === category.name)
 
-    if (!category) notFound()
-
-      const allProducts = products.filter((product) => product.category === category.name)
-
-      return (
+    return (
         <div className="flex flex-col min-h-screen">
           <header>
             <Header />
@@ -63,9 +69,8 @@ const page = ({params}: {params:  CategoryPageParams}) => {
                 </h2>
               </div>
               
-              {/* Responsive grid for product cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-8">
-                {allProducts.map((product) => (
+                {allProducts.map((product: Product) => (
                   <ItemCard
                     key={product.id}
                     img={product.image}
@@ -86,7 +91,5 @@ const page = ({params}: {params:  CategoryPageParams}) => {
             <Footer />
           </footer>
         </div>
-      )
+    )
 }
-
-export default page
