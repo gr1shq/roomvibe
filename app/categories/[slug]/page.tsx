@@ -1,62 +1,61 @@
-import { notFound } from 'next/navigation'
-import categories from '../../../data/categories.json'
-import products from '../../../data/products_list.json'
-import ItemCard from '@/app/(components)/ItemCard'
-import Footer from '@/app/(components)/Footer'
-import Header from '@/app/(components)/Header'
+import { notFound } from 'next/navigation';
+import categories from '../../../data/categories.json';
+import products from '../../../data/products_list.json';
+import ItemCard from '@/app/(components)/ItemCard';
+import Footer from '@/app/(components)/Footer';
+import Header from '@/app/(components)/Header';
 
 interface Category {
-  id: number
-  name: string
-  slug: string 
-  image: string
-  description: string
+  id: number;
+  name: string;
+  slug: string;
+  image: string;
+  description: string;
   theme: {
-    background: string
-    text: string
-    accent: string
-  }
+    background: string;
+    text: string;
+    accent: string;
+  };
 }
 
 interface Product {
-  id: number
-  name: string
-  category: string
-  price: string
-  image: string
-  affiliateLinkAmazon: string
-  affiliateLinkTemu: string
-}
-
-export async function generateStaticParams() {
-  return categories.map((category: Category) => ({
-    slug: category.slug
-  }))
+  id: number;
+  name: string;
+  category: string;
+  price: string;
+  image: string;
+  affiliateLinkAmazon: string;
+  affiliateLinkTemu: string;
 }
 
 interface CategoryPageProps {
   params: Promise<{
-    slug: string
-  }>
+    slug: string;
+  }>;
 }
 
-export default async function CategoryPage(props: CategoryPageProps) {
-  const { params } = props;
-  const { slug } = await params;
-  const category = categories.find((category: Category) => category.slug === slug)
-  
+export async function generateStaticParams() {
+  return categories.map((category: Category) => ({
+    slug: category.slug,
+  }));
+}
+
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const { slug } = await params; // Await params to get the slug
+  const category = categories.find((category: Category) => category.slug === slug) as Category | undefined;
+
   if (!category) {
-    notFound()
+    notFound();
   }
 
-  const allProducts = products.filter((product: Product) => product.category === category.name)
+  const allProducts = products.filter((product: Product) => product.category === category.name);
 
   return (
     <div className="flex flex-col min-h-screen">
       <header>
         <Header />
       </header>
-      
+
       <main
         className="flex-grow transition-colors duration-300"
         style={{
@@ -72,13 +71,12 @@ export default async function CategoryPage(props: CategoryPageProps) {
             >
               {category.name}
             </h1>
-            <h2 className="text-xl md:text-2xl">
-              {category.description}
-            </h2>
+            <h2 className="text-xl md:text-2xl">{category.description}</h2>
           </div>
-          
+
+          {/* Responsive grid for product cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-8">
-            {allProducts.map((product: Product) => (
+            {allProducts.map((product) => (
               <ItemCard
                 key={product.id}
                 img={product.image}
@@ -94,10 +92,10 @@ export default async function CategoryPage(props: CategoryPageProps) {
           </div>
         </div>
       </main>
-      
+
       <footer>
         <Footer />
       </footer>
     </div>
-  )
+  );
 }
