@@ -34,11 +34,14 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function CategoryPage({ 
-  params 
-}: { 
-  params: { slug: string } 
-}) {
+interface CategoryPageProps {
+  params: {
+    slug: string
+  }
+}
+
+export default function CategoryPage(props: CategoryPageProps) {
+  const { params } = props
   const category = categories.find((category: Category) => category.slug === params.slug)
   
   if (!category) {
