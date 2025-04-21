@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next';
 import categories from '../../../data/categories.json'
 import products from '../../../data/products_list.json'
 import ItemCard from '@/app/(components)/ItemCard'
@@ -28,13 +29,18 @@ interface Product {
     affiliateLinkTemu: string
 }
 
+interface PageProps {
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
 export async function generateStaticParams() {
     return categories.map((category: Category) => ({
         slug: category.slug
     }))
 }
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({ params }: PageProps) {
     const category = categories.find((category: Category) => category.slug === params.slug)
     
     if (!category) {
