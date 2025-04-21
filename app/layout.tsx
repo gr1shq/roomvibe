@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react"
+
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/favicon.ico"/>
+      <link rel="icon" href="/public/favicon.ico"/>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-K5XP2M3496"
