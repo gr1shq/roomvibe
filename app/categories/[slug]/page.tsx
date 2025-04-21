@@ -35,14 +35,15 @@ export async function generateStaticParams() {
 }
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function CategoryPage(props: CategoryPageProps) {
-  const { params } = props
-  const category = categories.find((category: Category) => category.slug === params.slug)
+export default async function CategoryPage(props: CategoryPageProps) {
+  const { params } = props;
+  const { slug } = await params;
+  const category = categories.find((category: Category) => category.slug === slug)
   
   if (!category) {
     notFound()
