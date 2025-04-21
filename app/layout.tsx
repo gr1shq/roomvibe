@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RoomVibe – Aesthetic Room Setup Finds",
     description: "Discover aesthetic gadgets and vibes for your dream room.",
-    images: ["/og-image.png"], // Add your image
   },
   icons: {
     icon: "/favicon.ico",
