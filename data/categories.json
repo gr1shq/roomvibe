@@ -1,0 +1,62 @@
+    [
+    {
+      "id": 1,
+      "name": "LED Paradise",
+      "slug": "led-paradise",
+        "image": "/product-images/sunset-lamp.webp",
+      "description": "Glowing lights and LED accessories to vibe up your space.",
+      "theme": {
+        "background": "#0D0B1E",
+        "text": "#F5F3FF",
+        "accent": "#C084FC"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Cozy Room",
+      "slug": "cozy-room",
+      "description": "Warm lights and aesthetic touches for maximum chill.",
+        "image": "/category-images/cozy-room.webp",
+      "theme": {
+        "background": "#FDF6F0",
+        "text": "#3F3F46",
+        "accent": "#EAB308"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Minimal Desk",
+      "slug": "minimal-desk",
+      "description": "Clean desk setups for focus and productivity.",
+        "image": "/category-images/minimal-desk.webp",
+      "theme": {
+        "background": "#F9FAFB",
+        "text": "#1E293B",
+        "accent": "#94A3B8"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Vibe Decor",
+      "slug": "vibe-decor",
+      "description": "Posters, candles, plants and more for your dream room.",
+        "image": "/category-images/vibe-decor.webp",
+      "theme": {
+        "background": "#1F1D2B",
+        "text": "#F8FAFC",
+        "accent": "#FB7185"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Gamer Setup",
+      "slug": "gamer-setup",
+      "description": "RGB accessories and gear for the ultimate gaming vibe.",
+        "image": "/category-images/gamer-setup.webp",
+      "theme": {
+        "background": "#111827",
+        "text": "#F1F5F9",
+        "accent": "#38BDF8"
+      }
+    }
+  ]

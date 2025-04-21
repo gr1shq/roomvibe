@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "name": "LED Strip Lights 16ft",
+      "image": "https://m.media-amazon.com/images/I/71V2lgTcp2L._AC_SX679_.jpg",
+      "price": "$12.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "LED Paradise",
+      "tags": ["led", "lights", "setup", "vibe"]
+    },
+    {
+      "id": 2,
+      "name": "USB LED Light Bars (2-Pack)",
+      "image": "https://m.media-amazon.com/images/I/613ZDSUYyGL._AC_SX679_.jpg",
+      "price": "$18.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "LED Paradise",
+      "tags": ["led", "bar", "usb", "vibe"]
+    },
+    {
+      "id": 3,
+      "name": "Sunset Projector Lamp",
+      "image": "https://m.media-amazon.com/images/I/719W5+x2roL._AC_SX342_SY445_.jpg",
+      "price": "$15.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Cozy Room",
+      "tags": ["lamp", "sunset", "aesthetic"]
+    },
+    {
+      "id": 4,
+      "name": "Cloud Wall LED Light",
+      "image": "https://m.media-amazon.com/images/I/71qh+pWA3mL._AC_SX342_SY445_.jpg",
+      "price": "$22.50",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",      "category": "Cozy Room",
+      "tags": ["cloud", "led", "room", "vibe"]
+    },
+    {
+      "id": 5,
+      "name": "Minimalist Wooden Monitor Stand",
+      "image": "https://m.media-amazon.com/images/I/71bCvRQLMhL._AC_SX679_.jpg",
+      "price": "$34.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Minimal Desk",
+      "tags": ["wood", "stand", "minimal", "desk"]
+    },
+    {
+      "id": 6,
+      "name": "Wireless Charging Pad - White Marble",
+      "image": "https://m.media-amazon.com/images/I/41G7r+vrQ7L._AC_SY300_SX300_.jpg",
+      "price": "$19.90",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Minimal Desk",
+      "tags": ["charging", "marble", "clean", "minimal"]
+    },
+    {
+      "id": 7,
+      "name": "Aesthetic Neon Sign - Vibes",
+      "image": "https://m.media-amazon.com/images/I/71ztyMMelJL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "price": "$25.00",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Vibe Decor",
+      "tags": ["neon", "vibes", "sign", "aesthetic"]
+    },
+    {
+      "id": 8,
+      "name": "Fake Ivy Hanging Decor",
+      "image": "https://m.media-amazon.com/images/I/81ljNPjLhlL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "price": "$14.49",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Vibe Decor",
+      "tags": ["plants", "ivy", "wall", "vibe"]
+    },
+    {
+      "id": 9,
+      "name": "RGB Gaming Keyboard",
+      "image": "https://m.media-amazon.com/images/I/61UGJ7z-sUL._AC_SX679_.jpg",
+      "price": "$39.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Gamer Setup",
+      "tags": ["rgb", "keyboard", "gaming", "setup"]
+    },
+    {
+      "id": 10,
+      "name": "Gaming Headset with Mic RGB",
+      "image": "https://m.media-amazon.com/images/I/71nUYWaf0RL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "price": "$29.99",
+      "affiliateLinkAmazon": "https://www.amazon.com/s?k=Sunset+Projector+Lamp&crid=ZREPKI28B5RF&sprefix=sunset+projector+lamp%2Caps%2C223&ref=nb_sb_noss_1",
+      "affiliateLinkTemu": "https://www.temu.com/search_result.html?search_key=Sunset%20Projector%20Lamp&search_method=user",
+      "category": "Gamer Setup",
+      "tags": ["headset", "rgb", "mic", "gaming"]
+    }
+  ]
+  
