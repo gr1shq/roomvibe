@@ -24,7 +24,7 @@ const Slide = () => {
     const container = containerRef.current;
     const containerWidth = container.scrollWidth / 2;
     let animationFrame: number;
-    let speed = 0.3; // pixels per frame - slower for elegance
+    const speed = 0.3; // pixels per frame - slower for elegance
 
     const animate = () => {
       if (!isHovered) {

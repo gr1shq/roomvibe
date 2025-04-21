@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../(components)/Footer';
 import Header from '../(components)/Header';
+import Link from 'next/link';
 
 const AffiliateDisclosure = () => {
   return (
@@ -40,12 +41,12 @@ const AffiliateDisclosure = () => {
 
         {/* Optional: Back button */}
         <div className="mt-12 text-center">
-          <a 
+          <Link 
             href="/" 
             className="inline-block px-6 py-3 bg-purple-700 hover:bg-purple-600 rounded-lg text-purple-100 font-medium transition-colors"
           >
             Back to Vibe
-          </a>
+          </Link>
         </div>
       </div>
     </div>
