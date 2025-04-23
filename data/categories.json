@@ -16,11 +16,11 @@
       "name": "Cozy Room",
       "slug": "cozy-room",
       "description": "Warm lights and aesthetic touches for maximum chill.",
-        "image": "/category-images/cozy-room.webp",
+      "image": "/category-images/cozy-room.webp",
       "theme": {
-        "background": "#FDF6F0",
-        "text": "#3F3F46",
-        "accent": "#EAB308"
+        "background": "#1C1B18",
+        "text": "#F4EDE4",
+        "accent": "#FFD479"
       }
     },
     {
@@ -28,11 +28,11 @@
       "name": "Minimal Desk",
       "slug": "minimal-desk",
       "description": "Clean desk setups for focus and productivity.",
-        "image": "/category-images/minimal-desk.webp",
+      "image": "/category-images/minimal-desk.webp",
       "theme": {
-        "background": "#F9FAFB",
-        "text": "#1E293B",
-        "accent": "#94A3B8"
+        "background": "#181A1B",
+        "text": "#E0E0E0",
+        "accent": "#A5B4FC"
       }
     },
     {

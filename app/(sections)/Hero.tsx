@@ -48,6 +48,7 @@ const HeroSection = () => {
             }}
           >
             Bring Vibe to Your Space
+            {/* Create Your Dream Room with Aesthetic Decor */}
           </h1>
           
           {/* Subheading */}
@@ -55,7 +56,7 @@ const HeroSection = () => {
             className={`text-xl md:text-2xl font-light max-w-2xl mx-auto transition-opacity duration-700 ${isMounted ? 'opacity-100' : 'opacity-0'}`}
             style={{ transitionDelay: '400ms' }}
           >
-            Curated Finds for Cozy Setups & Aesthetic Rooms
+            Curated RGB Lights, Cozy Essentials, and More from Amazon, Temu, and AliExpress
           </p>
 
           {/* CTA Button */}

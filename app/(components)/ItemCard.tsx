@@ -40,21 +40,31 @@ const ItemCard = ({img, title, category, price, button, button2, link, link2}: I
           {price}
         </p>
 
+        {/* Platform labels */}
+        <div className="flex justify-between mb-2 text-xs font-semibold">
+          <span className="text-orange-600">AliExpress</span>
+          <span className="text-red-500">Temu</span>
+        </div>
         
-        
-{/* Amazon-style button - bold, orange, with a gradient effect */}
-<Link href={link} target="_blank">
-<button className="w-full py-2 px-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
-    {button}
-</button>
-</Link>
+        {/* AliExpress button - orange/red gradient with shopping cart icon */}
+        <Link href={link} target="_blank">
+          <button className="w-full py-2 px-4 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            {button}
+          </button>
+        </Link>
 
-{/* Temu-style button - bright red, playful, with a slight shadow */}
-<Link href={link2} target="_blank">
-<button className="w-full py-2 px-4 bg-red-500 text-white rounded-full font-bold hover:bg-red-600 transition-colors shadow-sm hover:shadow-md mt-4">
-  {button2}
-</button>
-</Link>
+        {/* Temu button - bright red with rocket icon */}
+        <Link href={link2} target="_blank">
+          <button className="w-full py-2 px-4 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            {button2}
+          </button>
+        </Link>
       </div>
     </div>
   )
