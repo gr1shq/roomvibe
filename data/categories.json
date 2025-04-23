@@ -11,30 +11,30 @@
         "accent": "#C084FC"
       }
     },
-    {
-      "id": 2,
-      "name": "Cozy Room",
-      "slug": "cozy-room",
-      "description": "Warm lights and aesthetic touches for maximum chill.",
-      "image": "/category-images/cozy-room.webp",
-      "theme": {
-        "background": "#1C1B18",
-        "text": "#F4EDE4",
-        "accent": "#FFD479"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Minimal Desk",
-      "slug": "minimal-desk",
-      "description": "Clean desk setups for focus and productivity.",
-      "image": "/category-images/minimal-desk.webp",
-      "theme": {
-        "background": "#181A1B",
-        "text": "#E0E0E0",
-        "accent": "#A5B4FC"
-      }
-    },
+      {
+    "id": 2,
+    "name": "Cozy Room",
+    "slug": "cozy-room",
+    "description": "Warm lights and aesthetic touches for maximum chill.",
+    "image": "/category-images/cozy-room.webp",
+    "theme": {
+      "background": "#1C1B18",
+      "text": "#F4EDE4",
+      "accent": "#FFD479"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Minimal Desk",
+    "slug": "minimal-desk",
+    "description": "Clean desk setups for focus and productivity.",
+    "image": "/category-images/minimal-desk.webp",
+    "theme": {
+      "background": "#181A1B",
+      "text": "#E0E0E0",
+      "accent": "#A5B4FC"
+    }
+  },
     {
       "id": 4,
       "name": "Vibe Decor",

@@ -114,10 +114,9 @@ const Slide = () => {
                   title={product.name} 
                   category={product.category} 
                   price={product.price}  
-                  button="See on Amazon"
-                  button2="See on Temu"
-                  link={product.affiliateLinkAmazon}
-                  link2={product.affiliateLinkTemu}
+                  amazonLink={product.affiliateLinkAmazon}
+                  aliexpressLink={product.affiliateLinkAliExpress}
+                  temuLink={product.affiliateLinkTemu}
                 />
               </motion.div>
             ))}
