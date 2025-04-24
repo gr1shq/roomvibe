@@ -1,0 +1,103 @@
+[{
+  "id": 1,
+  "slug": "10-must-have-gadgets",
+  "title": "10 Must-Have Gadgets to Instantly Glow Up Your Room",
+  "description": "Discover aesthetic and functional gadgets that transform your room into a total vibe.",
+  "date": "2025-04-19",
+  "author": "RoomVibe Team",
+  "category": "Vibe Journal",
+  "tags": ["gadgets", "aesthetic", "room decor", "vibe", "LED", "setup"],
+  "image": "/blog-images/glow-up-room.jpg",
+  "theme": {
+    "background": "#0F172A",
+    "text": "#F8FAFC",
+    "accent": "#38BDF8"
+  },
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Looking to transform your space? These 10 room gadgets blend function and vibe, turning your room into the ultimate chill zone."
+    },
+    {
+      "type": "heading",
+      "text": "1. Sunset Lamp"
+    },
+    {
+      "type": "paragraph",
+      "text": "This TikTok-famous lamp brings a dreamy sunset into your room any time of day. It is perfect for ambient lighting and aesthetic selfies."
+    },
+    {
+      "type": "heading",
+      "text": "2. Moon Lamp"
+    },
+    {
+      "type": "paragraph",
+      "text": "A 3D-printed replica of the moon that glows gently — great for bedtime or cozy vibes."
+    },
+    {
+      "type": "heading",
+      "text": "3. LED Light Strips"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wrap your walls or desk setup in customizable color to instantly change your mood."
+    },
+    {
+      "type": "heading",
+      "text": "4. Cloud Ceiling Lights"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a dreamy, floating cloud look with these DIY LED-lit fluffy panels. Total vibe upgrade."
+    },
+    {
+      "type": "heading",
+      "text": "5. Galaxy Projector"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bring the universe to your ceiling. Great for relaxing, sleeping, or just vibing out with music."
+    },
+    {
+      "type": "heading",
+      "text": "6. Mini Fridge"
+    },
+    {
+      "type": "paragraph",
+      "text": "Keep your drinks and skincare cold — and your aesthetic on point — with a pastel or mirrored mini fridge."
+    },
+    {
+      "type": "heading",
+      "text": "7. Floating Shelves with LEDs"
+    },
+    {
+      "type": "paragraph",
+      "text": "These shelves do not just hold your stuff — they light it up. Great for figures, plants, or vibe decor."
+    },
+    {
+      "type": "heading",
+      "text": "8. RGB Alarm Clock"
+    },
+    {
+      "type": "paragraph",
+      "text": "A digital clock that glows with your favorite colors and sometimes doubles as a Bluetooth speaker."
+    },
+    {
+      "type": "heading",
+      "text": "9. Magnetic Levitating Lamp"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yes, it floats. And lights up. Instantly adds that futuristic feel to your desk or nightstand."
+    },
+    {
+      "type": "heading",
+      "text": "10. Neon Signs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Custom words, shapes, or emojis in neon form — a bold, bright touch that screams personality."
+    }
+  ]
+}
+]

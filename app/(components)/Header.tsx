@@ -10,7 +10,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Categories", href: "/categories" },
     // { name: "TikTok Picks", href: "/tiktok-picks" },
-    // { name: "Blog", href: "/blog" },
+    { name: "Vibe Feed", href: "/vibefeed" },
     { name: "About", href: "/about" },
     { name: "Contact us", href: "/contact" }
   ]
