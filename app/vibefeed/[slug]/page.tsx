@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import blogPosts from '../../../data/blog_post.json'
 
-
 // Define a type for content items
 type ContentItem = {
   type: 'heading' | 'paragraph'
@@ -35,13 +34,11 @@ interface BlogPost {
 // Type the blogPosts import
 const typedBlogPosts: BlogPost[] = blogPosts as BlogPost[]
 
-interface PageProps {
-  params: {
-    slug: string
-  }
-}
-
-export default function BlogPost({ params }: PageProps) {
+export default function BlogPost({
+  params
+}: {
+  params: { slug: string }
+}) {
   const post = typedBlogPosts.find(post => post.slug === params.slug)
   
   if (!post) {
@@ -61,7 +58,7 @@ export default function BlogPost({ params }: PageProps) {
           color: post.theme.text
         }}
       >
-        {/* Rest of your component remains the same */}
+        {/* Rest of your component remains exactly the same */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Back Button */}
           <Link 
