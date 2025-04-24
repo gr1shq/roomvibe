@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import blogPosts from '../../../data/blog_post.json'
 
+
 // Define a type for content items
 type ContentItem = {
   type: 'heading' | 'paragraph'
