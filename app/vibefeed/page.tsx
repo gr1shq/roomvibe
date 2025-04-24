@@ -73,7 +73,7 @@ export default function VibeFeed() {
           {blogPosts.length === 1 && (
             <div className="text-center mt-20">
               <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
-                More Vibes Coming Soon...
+                More Vibes Coming Soon..
               </h3>
               <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
                 We are brewing fresh content to elevate your space. Stay tuned for regular drops of design inspiration, 
