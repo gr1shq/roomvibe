@@ -5,49 +5,21 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import blogPosts from '../../../data/blog_post.json';
 
-// Define a type for content items
-type ContentItem = {
-  type: 'heading' | 'paragraph';
-  text: string;
-};
-
-// Define the BlogPost interface
-interface BlogPost {
-  id: number;
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  author: string;
-  category: string;
-  tags: string[];
-  image: string;
-  theme: {
-    background: string;
-    text: string;
-    accent: string;
-  };
-  content: ContentItem[];
-}
-
-// Type the blogPosts import
-const typedBlogPosts: BlogPost[] = blogPosts as BlogPost[];
-
 // Generate static params for pre-rendering
 export async function generateStaticParams() {
-  return typedBlogPosts.map(post => ({
+  return blogPosts.map(post => ({
     slug: post.slug,
   }));
 }
 
-// Generate dynamic metadata for SEO
+// Generate minimal metadata for SEO
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = await params; // Await params to resolve slug
-  const post = typedBlogPosts.find(post => post.slug === slug);
+  const { slug } = await params;
+  const post = blogPosts.find(post => post.slug === slug);
 
   if (!post) {
     return {
@@ -58,21 +30,6 @@ export async function generateMetadata({
   return {
     title: `${post.title} | RoomVibe`,
     description: post.description,
-    keywords: post.tags.join(', '),
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      images: [{ url: post.image, alt: post.title }],
-      type: 'article',
-      publishedTime: post.date,
-      authors: post.author,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.description,
-      images: [post.image],
-    },
     alternates: {
       canonical: `/vibe-feed/${slug}`,
     },
@@ -82,10 +39,10 @@ export async function generateMetadata({
 export default async function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>; // Fixed type to match PageProps
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // Await params to resolve slug
-  const post = typedBlogPosts.find(post => post.slug === slug);
+  const { slug } = await params;
+  const post = blogPosts.find(post => post.slug === slug);
 
   if (!post) {
     notFound();
@@ -182,7 +139,7 @@ export default async function BlogPost({
         </div>
       )}
 
-      {/* Structured Data for SEO */}
+      {/* Minimal Structured Data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -192,20 +149,10 @@ export default async function BlogPost({
             headline: post.title,
             description: post.description,
             datePublished: post.date,
-            author: {
-              '@type': 'Organization',
-              name: post.author,
-            },
             publisher: {
               '@type': 'Organization',
               name: 'RoomVibe',
-              logo: {
-                '@type': 'ImageObject',
-                url: '/logo.png', // Replace with actual logo URL
-              },
             },
-            image: post.image,
-            keywords: post.tags,
           }),
         }}
       />
