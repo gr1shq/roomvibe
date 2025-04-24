@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import blogPosts from '../../../data/blog_post.json'
-import { Metadata } from 'next'
 
 // Define a type for content items
 type ContentItem = {
