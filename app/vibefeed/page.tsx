@@ -76,7 +76,7 @@ export default function VibeFeed() {
                 More Vibes Coming Soon...
               </h3>
               <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                We're brewing fresh content to elevate your space. Stay tuned for regular drops of design inspiration, 
+                We are brewing fresh content to elevate your space. Stay tuned for regular drops of design inspiration, 
                 DIY tips, and vibe makeovers.
               </p>
             </div>
