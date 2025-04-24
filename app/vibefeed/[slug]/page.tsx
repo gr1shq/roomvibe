@@ -1,4 +1,4 @@
-// app/vibe-feed/[slug]/page.tsx
+// app/vibefeed/[slug]/page.tsx
 import Header from '@/app/(components)/Header';
 import Footer from '@/app/(components)/Footer';
 import Image from 'next/image';
@@ -48,8 +48,8 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const resolvedParams = 'then' in params ? await params : params;
-  const post = typedBlogPosts.find(post => post.slug === resolvedParams.slug);
+  const { slug } = await params; // Await params to resolve slug
+  const post = typedBlogPosts.find(post => post.slug === slug);
 
   if (!post) {
     return {
@@ -76,7 +76,7 @@ export async function generateMetadata({
       images: [post.image],
     },
     alternates: {
-      canonical: `/vibe-feed/${resolvedParams.slug}`,
+      canonical: `/vibefeed/${slug}`,
     },
   };
 }
@@ -84,10 +84,10 @@ export async function generateMetadata({
 export default async function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }> | { slug: string }; // Fixed type to support both Promise and object
+  params: Promise<{ slug: string }>; // Fixed type to match PageProps
 }) {
-  const resolvedParams = 'then' in params ? await params : params; // Resolve params
-  const post = typedBlogPosts.find(post => post.slug === resolvedParams.slug);
+  const { slug } = await params; // Await params to resolve slug
+  const post = typedBlogPosts.find(post => post.slug === slug);
 
   if (!post) {
     notFound();
