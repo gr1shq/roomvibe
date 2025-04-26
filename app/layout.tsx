@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "RoomVibe",
     images: [
       {
-        url: "/og-image.png", // Optional: Add a real OG image later
+        url: "https://roomvibe.vercel.app/img/gaming-room-bg.jpeg", 
         width: 1200,
         height: 630,
         alt: "RoomVibe OG Image",
