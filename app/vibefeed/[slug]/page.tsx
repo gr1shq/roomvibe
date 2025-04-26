@@ -80,12 +80,12 @@ export default async function BlogPost({
   }
 
   // Generate ToC from headings
-  const tableOfContents = post.content
-    .filter(item => item.type === 'heading')
-    .map(item => ({
-      text: item.text,
-      id: item.text.toLowerCase().replace(/\s+/g, '-'),
-    }));
+//   const tableOfContents = post.content
+//     .filter(item => item.type === 'heading')
+//     .map(item => ({
+//       text: item.text,
+//       id: item.text.toLowerCase().replace(/\s+/g, '-'),
+//     }));
 
   return (
     <div className="flex flex-col min-h-screen">

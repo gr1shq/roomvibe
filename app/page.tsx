@@ -23,11 +23,11 @@ export default function Home() {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "RoomVibe",
-              "url": "https://www.roomvibe.com",
+              "url": "https://www.roomvibe.vercel.app",
               "description": "RoomVibe curates aesthetic room decor and mood-setting products like RGB lights.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://www.roomvibe.com/search?q={search_term_string}",
+                "target": "https://www.roomvibe.vercel.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }

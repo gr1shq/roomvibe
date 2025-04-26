@@ -28,7 +28,7 @@ const TermsOfService = () => {
             Welcome to RoomVibe!
           </p>
           <p className="text-gray-300">
-            By using our website (<span className="text-purple-400">https://roomvibe.com</span>), you agree to the following terms:
+            By using our website (<span className="text-purple-400">https://roomvibe.vercel.app</span>), you agree to the following terms:
           </p>
         </div>
 

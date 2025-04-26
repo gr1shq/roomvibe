@@ -21,7 +21,7 @@ const AboutPage = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "RoomVibe",
-              "url": "https://www.roomvibe.com",
+              "url": "https://www.roomvibe.vercel.app",
               "description": "RoomVibe curates aesthetic room decor and mood-setting products like RGB lights to transform your space.",
               "sameAs": [
                 "https://sk.pinterest.com/tapecode/",
