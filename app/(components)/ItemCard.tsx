@@ -32,6 +32,7 @@ const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, tem
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
         />
       </div>
       

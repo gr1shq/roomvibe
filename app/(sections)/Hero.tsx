@@ -22,6 +22,7 @@ const HeroSection = () => {
           className="object-cover object-center blur-[2px]"
           quality={100}
           priority
+          loading="eager"
         />
       </div>
 

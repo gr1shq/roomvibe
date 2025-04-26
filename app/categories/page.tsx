@@ -27,7 +27,7 @@ const Page = () => {
                   {
                     "@type": "ListItem",
                     "position": ${index + 1},
-                    "url": "https://www.roomvibe.com/category/${category.slug}"
+                    "url": "https://www.roomvibe.vercel.app/categories/${category.slug}"
                   }
                 `
                   )

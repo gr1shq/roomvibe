@@ -19,6 +19,7 @@ const CategoryCard = ({ img, name, slug }: CategoryCardProps) => {
           fill
           className="object-cover blur-[2px] brightness-75"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
         />
       </div>
       
