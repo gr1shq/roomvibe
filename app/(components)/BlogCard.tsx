@@ -9,10 +9,11 @@ interface BlogPostProps {
     category: string
     date: string
     excerpt: string
+    slug: string
 }
 
 
-const BlogCard = ({id, image, title, category, date, excerpt}: BlogPostProps ) => {
+const BlogCard = ({id, image, title, category, date, excerpt, slug}: BlogPostProps ) => {
   return (
     <div>
         <div 
@@ -42,7 +43,7 @@ const BlogCard = ({id, image, title, category, date, excerpt}: BlogPostProps ) =
                   {excerpt}
                 </p>
                 <Link 
-                  href={`/vibe-feed/${id}`}
+                  href={`/vibefeed/${slug}`}
                   className="inline-flex items-center text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
                 >
                   Read More
