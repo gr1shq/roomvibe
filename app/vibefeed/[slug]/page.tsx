@@ -363,13 +363,13 @@ export default async function BlogPost({
                 Shop our curated collection of aesthetic decor and RGB lights to bring this look to your space!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link
+                {/* <Link
                   href="/shop" // Replace with actual shop page URL
                   className="px-6 py-3 rounded-full text-lg font-medium"
                   style={{ backgroundColor: post.theme.accent, color: post.theme.text }}
                 >
                   Shop RoomVibe
-                </Link>
+                </Link> */}
                 <Link
                   href="/vibefeed"
                   className="px-6 py-3 rounded-full text-lg font-medium border"
