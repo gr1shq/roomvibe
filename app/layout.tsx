@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "RoomVibe – Aesthetic Room Setup Finds",
   description: "Discover aesthetic room decor, LED lights, cozy gadgets, and minimal desk setups to elevate your space. Curated daily with trending picks.",
   keywords: ["room setup", "aesthetic", "vibe decor", "LED lights", "minimal desk", "gamer setup", "cozy room", "TikTok finds"],
-  metadataBase: new URL("https://roomvibe.vercel.app"), // Change this to your live domain later
+  metadataBase: new URL("https://roomvibe.vercel.app"), 
   openGraph: {
     title: "RoomVibe – Aesthetic Room Setup Finds",
     description: "Curated aesthetic room finds – LED lights, cozy gadgets, minimal setups, and more.",
