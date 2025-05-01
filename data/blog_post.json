@@ -1,225 +1,243 @@
-[{
-  "id": 1,
-  "slug": "10-must-have-gadgets",
-  "title": "10 Must-Have Gadgets to Instantly Glow Up Your Room",
-  "description": "Discover aesthetic and functional gadgets that transform your room into a total vibe.",
-  "date": "2025-04-19",
-  "author": "RoomVibe Team",
-  "category": "Vibe Journal",
-  "tags": ["gadgets", "aesthetic", "room decor", "vibe", "LED", "setup"],
-  "image": "/blog-images/glow-up-room.jpg",
-  "theme": {
-    "background": "#0F172A",
-    "text": "#F8FAFC",
-    "accent": "#38BDF8"
-  },
-  "content": [
+[
     {
-      "type": "paragraph",
-      "text": "Looking to transform your space? These 10 room gadgets blend function and vibe, turning your room into the ultimate chill zone."
+      "id": 1,
+      "slug": "10-must-have-gadgets",
+      "title": "10 Must-Have Gadgets to Instantly Glow Up Your Room",
+      "description": "Discover aesthetic and functional gadgets that transform your room into a total vibe.",
+      "date": "2025-04-19",
+      "author": "RoomVibe Team",
+      "category": "Vibe Journal",
+      "tags": ["gadgets", "aesthetic", "room decor", "vibe", "LED", "setup"],
+      "image": "/blog-images/glow-up-room.jpg",
+      "theme": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#38BDF8"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Looking to transform your space? These 10 room gadgets blend function and vibe, turning your room into the ultimate chill zone."
+        },
+        {
+          "type": "heading",
+          "text": "1. Sunset Lamp",
+          "url": "https://amzn.to/44BCFMT",
+          "temuUrl": "https://temu.to/k/e0f8obyo6uf", 
+          "aliexpressUrl": "https://aliexpress.com/sunset-lamp", 
+          "image": "https://m.media-amazon.com/images/I/719W5+x2roL._AC_SX342_SY445_.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "This TikTok-famous lamp brings a dreamy sunset into your room any time of day. It is perfect for ambient lighting and aesthetic selfies."
+        },
+        {
+          "type": "heading",
+          "text": "2. Moon Lamp",
+          "url": "https://amzn.to/3EAp4Lm",
+          "image": "/product-images/moon-lamp.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "A 3D-printed replica of the moon that glows gently — great for bedtime or cozy vibes."
+        },
+        {
+          "type": "heading",
+          "text": "3. LED Light Strips",
+          "url": "https://amzn.to/42NSBcG",
+          "temuUrl": "https://temu.to/led-strips", 
+          "image": "/product-images/strip-lightsz.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wrap your walls or desk setup in customizable color to instantly change your mood."
+        },
+        {
+          "type": "heading",
+          "text": "4. Cloud Ceiling Lights",
+          "url": "https://amzn.to/3GugmyT",
+          "image": "/product-images/strip-light2.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Create a dreamy, floating cloud look with these DIY LED-lit fluffy panels. Total vibe upgrade."
+        },
+        {
+          "type": "heading",
+          "text": "5. Galaxy Projector",
+          "url": "https://amzn.to/3EBfrfk",
+          "aliexpressUrl": "https://aliexpress.com/galaxy-projector", 
+          "image": "/product-images/space-projector.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring the universe to your ceiling. Great for relaxing, sleeping, or just vibing out with music."
+        },
+        {
+          "type": "heading",
+          "text": "6. Mini Fridge",
+          "url": "https://amzn.to/3YgQlsS",
+          "image": "/product-images/small-fridge.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Keep your drinks and skincare cold — and your aesthetic on point — with a pastel or mirrored mini fridge."
+        },
+        {
+          "type": "heading",
+          "text": "7. Floating Shelves with LEDs",
+          "url": "https://amzn.to/3GtcmP4",
+          "image": "/product-images/floating-shelv.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "These shelves do not just hold your stuff — they light it up. Great for figures, plants, or vibe decor."
+        },
+        {
+          "type": "heading",
+          "text": "8. RGB Alarm Clock",
+          "url": "https://amzn.to/4jJr82u",
+          "image": "/product-images/rgb-clock.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "A digital clock that glows with your favorite colors and sometimes doubles as a Bluetooth speaker."
+        },
+        {
+          "type": "heading",
+          "text": "9. Magnetic Levitating Lamp",
+          "url": "https://amzn.to/3S7Mefa",
+          "image": "/product-images/floating-lamp.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yes, it floats. And lights up. Instantly adds that futuristic feel to your desk or nightstand."
+        },
+        {
+          "type": "heading",
+          "text": "10. Neon Signs",
+          "url": "https://amzn.to/4cW2Dx4",
+          "image": "/product-images/itsavibe-sign.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Custom words, shapes, or emojis in neon form — a bold, bright touch that screams personality."
+        }
+      ]
     },
     {
-      "type": "heading",
-      "text": "1. Sunset Lamp",
-      "url": "https://amzn.to/44BCFMT",
-      "image": "https://m.media-amazon.com/images/I/719W5+x2roL._AC_SX342_SY445_.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "This TikTok-famous lamp brings a dreamy sunset into your room any time of day. It is perfect for ambient lighting and aesthetic selfies."
-    },
-    {
-      "type": "heading",
-      "text": "2. Moon Lamp",
-      "url": "https://amzn.to/3EAp4Lm",
-      "image": "/product-images/moon-lamp.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "A 3D-printed replica of the moon that glows gently — great for bedtime or cozy vibes."
-    },
-    {
-      "type": "heading",
-      "text": "3. LED Light Strips",
-      "url": "https://amzn.to/42NSBcG",
-      "image": "/product-images/strip-lightsz.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "Wrap your walls or desk setup in customizable color to instantly change your mood."
-    },
-    {
-      "type": "heading",
-      "text": "4. Cloud Ceiling Lights",
-      "url": "https://amzn.to/3GugmyT",
-      "image": "/product-images/strip-light2.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "Create a dreamy, floating cloud look with these DIY LED-lit fluffy panels. Total vibe upgrade."
-    },
-    {
-      "type": "heading",
-      "text": "5. Galaxy Projector",
-      "url": "https://amzn.to/3EBfrfk",
-      "image": "/product-images/space-projector.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "Bring the universe to your ceiling. Great for relaxing, sleeping, or just vibing out with music."
-    },
-    {
-      "type": "heading",
-      "text": "6. Mini Fridge",
-      "url": "https://amzn.to/3YgQlsS",
-      "image": "/product-images/small-fridge.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "Keep your drinks and skincare cold — and your aesthetic on point — with a pastel or mirrored mini fridge."
-    },
-    {
-      "type": "heading",
-      "text": "7. Floating Shelves with LEDs",
-      "url": "https://amzn.to/3GtcmP4",
-      "image": "/product-images/floating-shelv.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "These shelves do not just hold your stuff — they light it up. Great for figures, plants, or vibe decor."
-    },
-    {
-      "type": "heading",
-      "text": "8. RGB Alarm Clock",
-      "url": "https://amzn.to/4jJr82u",
-      "image": "/product-images/rgb-clock.jpg"
-    },
-    {
-      "type": "paragraph",
-      "text": "A digital clock that glows with your favorite colors and sometimes doubles as a Bluetooth speaker."
-    },
-    {
-      "type": "heading",
-      "text": "9. Magnetic Levitating Lamp",
-      "url": "https://amzn.to/3S7Mefa",
-      "image": "/product-images/floating-lamp.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "Yes, it floats. And lights up. Instantly adds that futuristic feel to your desk or nightstand."
-    },
-    {
-      "type": "heading",
-      "text": "10. Neon Signs",
-      "url": "https://amzn.to/4cW2Dx4",
-      "image": "/product-images/itsavibe-sign.webp"
-    },
-    {
-      "type": "paragraph",
-      "text": "Custom words, shapes, or emojis in neon form — a bold, bright touch that screams personality."
+      "id": 2,
+      "slug": "8-diy-aesthetic-room-decor-hacks",
+      "title": "8 DIY Aesthetic Room Decor Hacks for a Budget Glow-Up",
+      "description": "Transform your room into a Pinterest-worthy vibe with these easy, budget-friendly DIY decor hacks.",
+      "date": "2025-05-01",
+      "author": "RoomVibe Team",
+      "category": "Vibe Journal",
+      "tags": ["DIY", "aesthetic", "room decor", "budget", "LED", "neon", "small space"],
+      "image": "/blog-images/diy-room-glow.jpg",
+      "theme": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#38BDF8"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Want a dreamy, aesthetic room without breaking the bank? These 8 DIY decor hacks use affordable RoomVibe products and everyday items to create a vibe that is totally you."
+        },
+        {
+          "type": "heading",
+          "text": "1. Fairy Light Photo Wall",
+          "url": "https://amzn.to/44iNZgV",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_olg52qN", 
+          "image": "/product-images/photo-wall.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Clip polaroids or art prints to fairy lights for a cozy, Instagram-ready photo wall. Drape them over a curtain rod or pin to a corkboard for instant charm."
+        },
+        {
+          "type": "heading",
+          "text": "2. Neon Sign Quote Board",
+          "url": "https://amzn.to/4cW2Dx4",
+          "temuUrl": "https://temu.to/k/e0f8obyo6uf",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_oFECDFb", 
+          "image": "/product-images/itsavibe-sign.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pair a neon sign with a DIY quote board (use a canvas and vinyl letters). Choose a bold phrase like Stay Vibey for a glowing focal point."
+        },
+        {
+          "type": "heading",
+          "text": "3. LED Light Jar Lantern",
+          "url": "https://amzn.to/3Gyxx2l",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_oovWy9x",  
+          "image": "/product-images/light-jar.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stuff LED light strips into a mason jar with tissue paper for a soft, colorful lantern. Place on a nightstand for a dreamy glow."
+        },
+        {
+          "type": "heading",
+          "text": "4. Sunset Lamp Corner Nook",
+          "url": "https://amzn.to/44BCFMT",
+          "temuUrl": "https://temu.to/k/egbp9gaozmr",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_olppKdx", 
+          "image": "/product-images/sunset-lamp.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Create a cozy reading nook by aiming a sunset lamp at a corner with pillows and a thrifted rug. Perfect for small spaces."
+        },
+        {
+          "type": "heading",
+          "text": "5. Vinyl Record Wall Art",
+          "url": "https://amzn.to/44iOesl",
+          "temuUrl": "https://temu.to/k/e7d3ermmog9",
+          "image": "/product-images/vinyl-wall-art.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Glue old vinyl records to a painted board, then add LED fairy lights around the edges. Hang above your desk for retro vibes."
+        },
+        {
+          "type": "heading",
+          "text": "6. Galaxy Projector Ceiling Art",
+          "url": "https://amzn.to/3EBfrfk",
+          "temuUrl": "https://temu.to/k/e505l2ue3c4",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_oDDZPHB", 
+          "image": "/product-images/space-projector.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use a galaxy projector to cast stars on your ceiling, then stick glow-in-the-dark decals for a permanent starry effect."
+        },
+        {
+          "type": "heading",
+          "text": "7. Floating Shelf Plant Display",
+          "url": "https://amzn.to/3GtcmP4",
+          "temuUrl": "https://temu.to/k/e87iyi0ilh3",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_o2bSFod", 
+          "image": "/product-images/floating-shelv.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mount floating shelves with small potted plants and fairy lights. Add mirrored tiles for a glassmorphic, aesthetic touch."
+        },
+        {
+          "type": "heading",
+          "text": "8. Washi Tape Wall Grid",
+          "url": "https://amzn.to/3YNsVvF",
+          "temuUrl": "https://temu.to/k/e9140jqfak8",
+          "aliexpressUrl": "https://s.click.aliexpress.com/e/_oFQEjiD", 
+          "image": "/product-images/washi-wall-tape.jpg"
+        },
+        {
+          "type": "paragraph",
+          "text": "Create a minimalist photo grid with washi tape and prints. Accent with a small LED clip light for a glowing frame effect."
+        }
+      ]
     }
   ]
-},
-{
-    "id": 2,
-    "slug": "8-diy-aesthetic-room-decor-hacks",
-    "title": "8 DIY Aesthetic Room Decor Hacks for a Budget Glow-Up",
-    "description": "Transform your room into a Pinterest-worthy vibe with these easy, budget-friendly DIY decor hacks.",
-    "date": "2025-05-01",
-    "author": "RoomVibe Team",
-    "category": "Vibe Journal",
-    "tags": ["DIY", "aesthetic", "room decor", "budget", "LED", "neon", "small space"],
-    "image": "/blog-images/diy-room-glow.jpg",
-    "theme": {
-      "background": "#0F172A",
-      "text": "#F8FAFC",
-      "accent": "#38BDF8"
-    },
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Want a dreamy, aesthetic room without breaking the bank? These 8 DIY decor hacks use affordable RoomVibe products and everyday items to create a vibe that’s totally you."
-      },
-      {
-        "type": "heading",
-        "text": "1. Fairy Light Photo Wall",
-        "url": "https://amzn.to/44iNZgV",
-        "image": "/product-images/photo-wall.jpg"
-      },
-      {
-        "type": "paragraph",
-        "text": "Clip polaroids or art prints to fairy lights for a cozy, Instagram-ready photo wall. Drape them over a curtain rod or pin to a corkboard for instant charm."
-      },
-      {
-        "type": "heading",
-        "text": "2. Neon Sign Quote Board",
-        "url": "https://amzn.to/4cW2Dx4",
-        "image": "/product-images/itsavibe-sign.webp"
-      },
-      {
-        "type": "paragraph",
-        "text": "Pair a neon sign with a DIY quote board (use a canvas and vinyl letters). Choose a bold phrase like ‘Stay Vibey’ for a glowing focal point."
-      },
-      {
-        "type": "heading",
-        "text": "3. LED Light Jar Lantern",
-        "url": "https://amzn.to/42NSBcG",
-        "image": "/product-images/strip-lightsz.webp"
-      },
-      {
-        "type": "paragraph",
-        "text": "Stuff LED light strips into a mason jar with tissue paper for a soft, colorful lantern. Place on a nightstand for a dreamy glow."
-      },
-      {
-        "type": "heading",
-        "text": "4. Sunset Lamp Corner Nook",
-        "url": "https://amzn.to/44BCFMT",
-        "image": "/product-images/sunset-lamp.webp"
-      },
-      {
-        "type": "paragraph",
-        "text": "Create a cozy reading nook by aiming a sunset lamp at a corner with pillows and a thrifted rug. Perfect for small spaces."
-      },
-      {
-        "type": "heading",
-        "text": "5. Vinyl Record Wall Art",
-        "url": "https://amzn.to/44iOesl",
-        "image": "/product-images/vinyl-wall-art.jpg"
-      },
-      {
-        "type": "paragraph",
-        "text": "Glue old vinyl records to a painted board, then add LED fairy lights around the edges. Hang above your desk for retro vibes."
-      },
-      {
-        "type": "heading",
-        "text": "6. Galaxy Projector Ceiling Art",
-        "url": "https://amzn.to/3EBfrfk",
-        "image": "/product-images/space-projector.webp"
-      },
-      {
-        "type": "paragraph",
-        "text": "Use a galaxy projector to cast stars on your ceiling, then stick glow-in-the-dark decals for a permanent starry effect."
-      },
-      {
-        "type": "heading",
-        "text": "7. Floating Shelf Plant Display",
-        "url": "https://amzn.to/3GtcmP4",
-        "image": "/product-images/floating-shelv.jpg"
-      },
-      {
-        "type": "paragraph",
-        "text": "Mount floating shelves with small potted plants and fairy lights. Add mirrored tiles for a glassmorphic, aesthetic touch."
-      },
-      {
-        "type": "heading",
-        "text": "8. Washi Tape Wall Grid",
-        "url": "https://amzn.to/3YNsVvF",
-        "image": "/product-images/washi-wall-tape.jpg"
-      },
-      {
-        "type": "paragraph",
-        "text": "Create a minimalist photo grid with washi tape and prints. Accent with a small LED clip light for a glowing frame effect."
-      }
-    ]
-  }
-]
