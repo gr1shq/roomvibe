@@ -119,5 +119,107 @@
       "text": "Custom words, shapes, or emojis in neon form — a bold, bright touch that screams personality."
     }
   ]
-}
+},
+{
+    "id": 2,
+    "slug": "8-diy-aesthetic-room-decor-hacks",
+    "title": "8 DIY Aesthetic Room Decor Hacks for a Budget Glow-Up",
+    "description": "Transform your room into a Pinterest-worthy vibe with these easy, budget-friendly DIY decor hacks.",
+    "date": "2025-05-01",
+    "author": "RoomVibe Team",
+    "category": "Vibe Journal",
+    "tags": ["DIY", "aesthetic", "room decor", "budget", "LED", "neon", "small space"],
+    "image": "/blog-images/diy-room-glow.jpg",
+    "theme": {
+      "background": "#0F172A",
+      "text": "#F8FAFC",
+      "accent": "#38BDF8"
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Want a dreamy, aesthetic room without breaking the bank? These 8 DIY decor hacks use affordable RoomVibe products and everyday items to create a vibe that’s totally you."
+      },
+      {
+        "type": "heading",
+        "text": "1. Fairy Light Photo Wall",
+        "url": "https://amzn.to/44iNZgV",
+        "image": "/product-images/photo-wall.jpg"
+      },
+      {
+        "type": "paragraph",
+        "text": "Clip polaroids or art prints to fairy lights for a cozy, Instagram-ready photo wall. Drape them over a curtain rod or pin to a corkboard for instant charm."
+      },
+      {
+        "type": "heading",
+        "text": "2. Neon Sign Quote Board",
+        "url": "https://amzn.to/4cW2Dx4",
+        "image": "/product-images/itsavibe-sign.webp"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pair a neon sign with a DIY quote board (use a canvas and vinyl letters). Choose a bold phrase like ‘Stay Vibey’ for a glowing focal point."
+      },
+      {
+        "type": "heading",
+        "text": "3. LED Light Jar Lantern",
+        "url": "https://amzn.to/42NSBcG",
+        "image": "/product-images/strip-lightsz.webp"
+      },
+      {
+        "type": "paragraph",
+        "text": "Stuff LED light strips into a mason jar with tissue paper for a soft, colorful lantern. Place on a nightstand for a dreamy glow."
+      },
+      {
+        "type": "heading",
+        "text": "4. Sunset Lamp Corner Nook",
+        "url": "https://amzn.to/44BCFMT",
+        "image": "/product-images/sunset-lamp.webp"
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a cozy reading nook by aiming a sunset lamp at a corner with pillows and a thrifted rug. Perfect for small spaces."
+      },
+      {
+        "type": "heading",
+        "text": "5. Vinyl Record Wall Art",
+        "url": "https://amzn.to/44iOesl",
+        "image": "/product-images/vinyl-wall-art.jpg"
+      },
+      {
+        "type": "paragraph",
+        "text": "Glue old vinyl records to a painted board, then add LED fairy lights around the edges. Hang above your desk for retro vibes."
+      },
+      {
+        "type": "heading",
+        "text": "6. Galaxy Projector Ceiling Art",
+        "url": "https://amzn.to/3EBfrfk",
+        "image": "/product-images/space-projector.webp"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use a galaxy projector to cast stars on your ceiling, then stick glow-in-the-dark decals for a permanent starry effect."
+      },
+      {
+        "type": "heading",
+        "text": "7. Floating Shelf Plant Display",
+        "url": "https://amzn.to/3GtcmP4",
+        "image": "/product-images/floating-shelv.jpg"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mount floating shelves with small potted plants and fairy lights. Add mirrored tiles for a glassmorphic, aesthetic touch."
+      },
+      {
+        "type": "heading",
+        "text": "8. Washi Tape Wall Grid",
+        "url": "https://amzn.to/3YNsVvF",
+        "image": "/product-images/washi-wall-tape.jpg"
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a minimalist photo grid with washi tape and prints. Accent with a small LED clip light for a glowing frame effect."
+      }
+    ]
+  }
 ]
