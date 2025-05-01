@@ -149,26 +149,26 @@ export default function VibeFeed() {
 }
 
 // Structured Data for Blog (Added to Head via Script)
-export function generateStructuredData() {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'Vibe Feed',
-    description:
-      'Curated inspiration, design secrets, and fresh vibes for your space.',
-    url: 'https://roomvibe.vercel.app/vibefeed',
-    blogPost: blogPosts.map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      datePublished: post.date,
-      image: post.image,
-      url: `https://roomvibe.vercel.app/vibefeed/${post.slug}`,
-      author: {
-        '@type': 'Organization',
-        name: 'RoomVibe', 
-      },
-    })),
-  };
-  return structuredData;
-}
+// export function generateStructuredData() {
+//   const structuredData = {
+//     '@context': 'https://schema.org',
+//     '@type': 'Blog',
+//     name: 'Vibe Feed',
+//     description:
+//       'Curated inspiration, design secrets, and fresh vibes for your space.',
+//     url: 'https://roomvibe.vercel.app/vibefeed',
+//     blogPost: blogPosts.map((post) => ({
+//       '@type': 'BlogPosting',
+//       headline: post.title,
+//       description: post.description,
+//       datePublished: post.date,
+//       image: post.image,
+//       url: `https://roomvibe.vercel.app/vibefeed/${post.slug}`,
+//       author: {
+//         '@type': 'Organization',
+//         name: 'RoomVibe', 
+//       },
+//     })),
+//   };
+//   return structuredData;
+// }
