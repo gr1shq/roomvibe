@@ -64,8 +64,8 @@ const AboutPage = () => {
             <p className="text-gray-300 text-lg leading-relaxed">
               Whether you are building a dream gaming setup, a cozy study zone, or chasing that sunset lamp glow, 
               RoomVibe helps you find aesthetic room decor that <span className="italic text-purple-400">feels right</span>. 
-              Check out our <a href="/categories/led-paradise" className="text-purple-400 hover:underline">RGB Lights</a> or 
-              read our <a href="/vibefeed" className="text-purple-400 hover:underline">Room Vibe Tips</a>.
+              Check out our <Link href="/categories/led-paradise" className="text-purple-400 hover:underline">RGB Lights</Link> or 
+              read our <Link href="/vibefeed" className="text-purple-400 hover:underline">Room Vibe Tips</Link>.
             </p>
           </section>
 
