@@ -1,9 +1,12 @@
-"use client";
-import { useRef, useEffect, useState } from 'react';
+// app/(sections)/Slide.tsx
+'use client';
+
+import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import ItemCard from "../(components)/ItemCard";
-import products from "../../data/products.json";
+import ItemCard from '../(components)/ItemCard';
+import products from '../../data/products.json';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Slide = () => {
   const [ref, inView] = useInView({
@@ -11,46 +14,28 @@ const Slide = () => {
     threshold: 0.3,
   });
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
-  // Double the products for seamless looping
-  const duplicatedProducts = [...products, ...products];
+  // Scroll left/right by one card width
+  const scroll = (direction: 'left' | 'right') => {
+    if (!containerRef.current) return;
+    const cardWidth = 320 + 40; // Card width (320px) + gap (40px)
+    const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+    containerRef.current.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth',
+    });
+  };
 
-  // Auto-scroll effect with variable speed
-  useEffect(() => {
-    if (!containerRef.current || !inView) return;
-
-    const container = containerRef.current;
-    const containerWidth = container.scrollWidth / 2;
-    let animationFrame: number;
-    const speed = 0.3; // pixels per frame - slower for elegance
-
-    const animate = () => {
-      if (!isHovered) {
-        setScrollPosition(prev => {
-          // Smooth reset when reaching the duplicate point
-          if (prev >= containerWidth) return 0;
-          return prev + speed;
-        });
-      }
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [inView, isHovered]);
-
-  // Enhanced animation variants
+  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        when: "beforeChildren"
-      }
-    }
+        when: 'beforeChildren',
+      },
+    },
   };
 
   const itemVariants = {
@@ -61,17 +46,18 @@ const Slide = () => {
       scale: 1,
       transition: {
         duration: 0.7,
-        ease: [0.16, 1, 0.3, 1] // Elegant ease-out
-      }
-    }
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
   };
 
   return (
-    <div 
+    <section
       ref={ref}
-      className="min-h-[60vh] bg-gradient-to-b from-[#111111] to-[#1a102a] text-[#e0d7ff] py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative "
+      className="min-h-[60vh] bg-gradient-to-b from-[#111111] to-[#1a102a] text-[#e0d7ff] py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative"
+      aria-label="Featured Products"
     >
-      {/* Subtle gradient fade on sides */}
+      {/* Subtle gradient fades on sides */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#111111] to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#111111] to-transparent z-10 pointer-events-none" />
 
@@ -79,51 +65,71 @@ const Slide = () => {
         className="max-w-7xl mx-auto relative"
         variants={containerVariants}
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
       >
-        {/* Enhanced Heading */}
+        {/* Heading */}
         <motion.div className="text-center mb-12 md:mb-16" variants={itemVariants}>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
-          Vibe Picks You will Love
-          </h1>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
+            Vibe Picks You’ll Love
+          </h2>
           <p className="text-[#b8b5ff] max-w-2xl mx-auto">
-          Soft lights, cool gear, and everything in between.
+            Soft lights, cool gear, and everything in between.
           </p>
         </motion.div>
 
-        {/* Infinite Carousel */}
-        <motion.div 
-          className="relative w-full overflow-x-hidden overflow-y-hidden py-2"
-          variants={containerVariants}
-        >
+        {/* Scrollable Carousel */}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <button
+            onClick={() => scroll('left')}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#2a1a4a]/80 hover:bg-[#d367e1]/80 text-[#f5f5f5] p-3 rounded-full z-20 hidden md:block"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#2a1a4a]/80 hover:bg-[#d367e1]/80 text-[#f5f5f5] p-3 rounded-full z-20 hidden md:block"
+            aria-label="Scroll right"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Carousel Container */}
           <div
             ref={containerRef}
-            className="flex gap-8 md:gap-10 w-max"
-            style={{ transform: `translateX(-${scrollPosition}px)` }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-8 md:gap-10 py-2"
+            style={{ scrollBehavior: 'smooth' }}
           >
-            {duplicatedProducts.map((product, index) => (
+            {products.map((product, index) => (
               <motion.div
-                key={`${index}-${product.id}`}
+                key={`${product.id}-${index}`}
                 variants={itemVariants}
-                className="w-[280px] sm:w-[320px] flex-shrink-0 hover:scale-[1.02] transition-transform duration-300"
+                className="w-[280px] sm:w-[320px] flex-shrink-0 snap-start hover:scale-[1.02] transition-transform duration-300"
+                itemScope
+                itemType="https://schema.org/Product"
               >
-                <ItemCard 
-                  img={product.image} 
-                  title={product.name} 
-                  category={product.category} 
-                  price={product.price}  
+                <ItemCard
+                  img={product.image}
+                  title={product.name}
+                  category={product.category}
+                  price={product.price}
                   amazonLink={product.affiliateLinkAmazon}
                   aliexpressLink={product.affiliateLinkAliExpress}
                   temuLink={product.affiliateLinkTemu}
                 />
+                {/* <meta itemProp="name" content={product.name} />
+                <meta itemProp="image" content={product.image} />
+                <meta itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                  <meta itemProp="price" content={product.price.toString()} />
+                  <meta itemProp="priceCurrency" content="USD" />
+                </meta> */}
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

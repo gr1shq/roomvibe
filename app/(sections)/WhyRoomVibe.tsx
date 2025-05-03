@@ -52,8 +52,8 @@ const WhyRoomVibe = () => {
     {
       title: 'Fast & Easy to Browse',
       description: 'No endless scrolling. Find your vibe fast with smooth categories and clean design.',
-      image: '/product-images/desk-shelf.webp', // Replace with actual image path
-      ctaLink: '/categories', // Assumed category page; adjust if needed
+      image: '/product-images/desk-shelf.webp', 
+      ctaLink: '/categories', 
       ctaText: 'Browse Categories',
     },
   ];

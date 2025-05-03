@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RoomVibe
 
-## Getting Started
+![RoomVibe Logo](https://roomvibe.vercel.app/favicon.ico) 
 
-First, run the development server:
+**RoomVibe** is an aesthetic e-commerce platform that curates room decor, RGB lights, and cozy upgrades to transform your space. Featuring a scrollable product carousel, inspirational blog posts, and affiliate links to Amazon, AliExpress, and Temu, RoomVibe helps users create their dream vibe with curated picks and DIY tips.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌌 **Live Demo**: [roomvibe.vercel.app](https://roomvibe.vercel.app)  
+📖 **VibeFeed**: Explore blog posts for decor inspiration at [/vibefeed](https://www.roomvibe.vercel.app/vibefeed)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Scrollable Product Carousel**: Browse curated "Vibe Picks" with affiliate links to Amazon, AliExpress, and Temu (`Slide` section).
+- **VibeFeed Blog Showcase**: Discover aesthetic room decor ideas and DIY hacks via dynamic blog cards (`VibeFeedSection`).
+- **Aesthetic Design**: Glassmorphic cards, gradient backgrounds, and Framer Motion animations for a mystical, immersive experience.
+- **SEO Optimized**: Schema markup for products and blog posts, OpenGraph/Twitter Cards for social sharing.
+- **Responsive**: Mobile-friendly layout with swipe gestures, touch-friendly CTAs, and responsive grids.
+- **Affiliate Integration**: Monetized through affiliate links in product cards and blog posts.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js](https://nextjs.org/) (React framework with server-side rendering)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for responsive, utility-first styling
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) for smooth transitions and effects
+- **Interactivity**: [React Parallax Tilt](https://www.npmjs.com/package/react-parallax-tilt) for card tilt effects, [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer) for viewport animations
+- **Icons**: [Lucide React](https://lucide.dev/) for navigation arrows
+- **Data**: JSON files (`products.json`, `blog_post.json`) for products and blog content
+- **Deployment**: [Vercel](https://vercel.com/) for hosting and CI/CD
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
