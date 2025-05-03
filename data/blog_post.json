@@ -251,5 +251,202 @@
           "text": "Create a minimalist photo grid with washi tape and prints. Accent with a small LED clip light for a glowing frame effect."
         }
       ]
-    }
+    },
+    {
+        "id": 3,
+        "slug": "ultimate-girl-bedroom-glow-up",
+        "title": "Ultimate Girl Bedroom Glow-Up: 15+ Aesthetic Decor Looks",
+        "description": "Transform your bedroom into a dreamy, Pinterest-worthy sanctuary with these 15+ aesthetic decor looks, from coquette bows to pastel goth vibes.",
+        "date": "2025-05-03",
+        "author": "RoomVibe Team",
+        "category": "Vibe Journal",
+        "tags": ["bedroom decor", "aesthetic", "girl room", "coquette", "pastel goth", "minimalist", "DIY", "vibe"],
+        "image": "/blog-images/girl-room.webp",
+        "theme": {
+          "background": "#1F1A44",
+          "text": "#F5E6FF",
+          "accent": "#FF80BF"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Ready to turn your bedroom into the ultimate aesthetic escape? Whether you’re obsessed with coquette bows, pastel goth vibes, or clean minimalist looks, these 15+ decor ideas will inspire a glow-up that’s totally YOU. From budget-friendly DIYs to curated RoomVibe picks, let’s create a space that’s as vibey as your Pinterest boards!"
+          },
+          {
+            "type": "heading",
+            "text": "1. Coquette Bow Canopy",
+            "url": "https://amzn.to/433ap3v",
+            "temuUrl": "https://temu.to/k/ernxna2xyaa",
+            "aliexpressUrl": " https://s.click.aliexpress.com/e/_okcekhJ",
+            "image": "/product-images/coquette-bow.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Drape sheer curtains with oversized satin bows above your bed for a soft, romantic coquette vibe. Pair with fairy lights for extra sparkle."
+          },
+          {
+            "type": "heading",
+            "text": "2. Pastel LED Wall Art",
+            "url": "https://amzn.to/4iLXXLo",
+            "temuUrl": "https://temu.to/k/ejjjcmvomea",
+            "image": "/product-images/led-wall-art.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hang pastel-colored LED signs (think hearts or stars) for a pop of color that glows at night. Perfect for selfies and cozy evenings."
+          },
+          {
+            "type": "heading",
+            "text": "3. Plush Velvet Headboard",
+            "url": "https://amzn.to/44FlBWH",
+            "temuUrl": "https://temu.to/k/elua9oekpo8",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oBgofEN",
+            "image": "/product-images/headboard.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Upgrade your bed with a plush velvet headboard in blush pink or lavender. It’s luxurious, aesthetic, and screams main character energy."
+          },
+          {
+            "type": "heading",
+            "text": "4. DIY Photo Collage Wall",
+            "url": "https://amzn.to/4iVKSiQ",
+            "temuUrl": "https://temu.to/k/e4qnohpsnvu",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oF2Hd7f",
+            "image": "/product-images/photo-wall.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Create a heart-shaped photo collage with Polaroids and washi tape. Add mini LED clips for a glowing, Pinterest-perfect display."
+          },
+          {
+            "type": "heading",
+            "text": "5. Moon Phase Wall Decals",
+            "url": "https://amzn.to/4iPco1p",
+            "temuUrl": "https://temu.to/k/e8jgiwz3npo",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oESiWVB",
+            "image": "/product-images/moon-phase.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Stick metallic moon phase decals above your bed for a mystical, celestial vibe. Pair with a galaxy projector for full effect."
+          },
+          {
+            "type": "heading",
+            "text": "6. Pastel Goth Skull Planters",
+            "url": "https://amzn.to/4k365bw",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_ooTXjDj",
+            "image": "/product-images/skull-planters.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Add quirky pastel goth planters shaped like skulls for succulents or faux plants. A bold yet cute touch for edgy vibes."
+          },
+          {
+            "type": "heading",
+            "text": "7. Fairy Light Curtain",
+            "url": "https://amzn.to/3GA4BqA",
+            "temuUrl": "https://temu.to/k/eg13b7apxur",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oE9EEID",
+            "image": "/product-images/fairy-light.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hang fairy lights behind sheer curtains for a twinkling backdrop. Choose warm or pastel LEDs to match your aesthetic."
+          },
+          {
+            "type": "heading",
+            "text": "8. Minimalist Floating Shelves",
+            "url": "https://amzn.to/3GtcmP4",
+            "temuUrl": "https://temu.to/k/e9wtdczeyn9",
+            "image": "/product-images/floating-shelv.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Display candles, books, or trinkets on white floating shelves for a clean, Scandi-inspired look. Add a small mirror for depth."
+          },
+          {
+            "type": "heading",
+            "text": "9. Sunset Lamp Nook",
+            "url": "https://amzn.to/44BCFMT",
+            "temuUrl": "https://temu.to/k/egbp9gaozmr",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_olppKdx",
+            "image": "https://m.media-amazon.com/images/I/719W5+x2roL._AC_SX342_SY445_.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Set up a sunset lamp in a cozy corner with floor pillows and a fuzzy rug for the ultimate reading or vibe spot."
+          },
+          {
+            "type": "heading",
+            "text": "10. Cozy Knit Throw Blankets",
+            "url": "https://amzn.to/44nbt4G",
+            "temuUrl": "https://temu.to/k/ennkw6b3x1d",
+            "aliexpressUrl": " https://s.click.aliexpress.com/e/_oEg3Ao5",
+            "image": "/product-images/knit-throw.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Drape pastel knit throws over your bed or chair for warmth and texture. Pick blush, lavender, or cream for softness."
+          },
+          {
+            "type": "heading",
+            "text": "11. Neon Heart Sign",
+            "url": "https://amzn.to/4iEqcLP",
+            "temuUrl": "https://temu.to/k/ejk33qpc38r",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_okLYI8V",
+            "image": "/product-images/heart-sign.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "A glowing pink neon heart sign adds a bold, romantic touch. Mount above your desk or bed for instant vibes."
+          },
+          {
+            "type": "heading",
+            "text": "12. DIY Tassel Garland",
+            "url": "https://amzn.to/4k3f4JH",
+            "image": "/product-images/tassel.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Craft a colorful tassel garland with yarn and beads to hang across your wall or window. Super budget-friendly and cute!"
+          },
+          {
+            "type": "heading",
+            "text": "13. Pastel Desk Organizer",
+            "url": "https://amzn.to/3YsalJa",
+            "temuUrl": "https://temu.to/k/e8k7k2wzicb",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_okGsbwz",
+            "image": "/product-images/desk-organizer.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Keep your desk tidy with a pastel organizer for pens, notebooks, and trinkets. Matches coquette or minimalist aesthetics."
+          },
+          {
+            "type": "heading",
+            "text": "14. Galaxy Projector Ceiling",
+            "url": "https://amzn.to/3EBfrfk",
+            "temuUrl": "https://temu.to/k/e505l2ue3c4",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oDDZPHB",
+            "image": "/product-images/space-projector.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Cast stars and nebulae on your ceiling with a galaxy projector. Add glow-in-the-dark stickers for a magical touch."
+          },
+          {
+            "type": "heading",
+            "text": "15. Ruffled Bedding Set",
+            "url": "https://amzn.to/4m0HjKS",
+            "temuUrl": "https://temu.to/k/etu5zxhb1j7",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oEB5Cb3",
+            "image": "/product-images/bedding-set.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Swap your bedding for a ruffled, pastel set in pink or lavender. It’s soft, feminine, and instantly elevates your room."
+          }
+        ]
+      }
   ]
