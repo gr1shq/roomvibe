@@ -58,8 +58,8 @@ const Slide = () => {
       aria-label="Featured Products"
     >
       {/* Subtle gradient fades on sides */}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#111111] to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#111111] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#111111] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#111111] to-transparent z-10 pointer-events-none" />
 
       <motion.div
         className="max-w-7xl mx-auto relative"
