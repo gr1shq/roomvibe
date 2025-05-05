@@ -448,5 +448,141 @@
             "text": "Swap your bedding for a ruffled, pastel set in pink or lavender. It’s soft, feminine, and instantly elevates your room."
           }
         ]
+      },
+      {
+        "id": 4,
+        "slug": "10-budget-friendly-living-room-decor-ideas-2025",
+        "title": "10 Budget-Friendly Living Room Decor Ideas for 2025",
+        "description": "Revamp your living room with these 10 budget-friendly decor ideas for 2025. Create a cozy, Pinterest-worthy space without breaking the bank!",
+        "date": "2025-05-05",
+        "author": "RoomVibe Team",
+        "category": "Vibe Journal",
+        "tags": ["living room decor", "budget-friendly", "cozy", "aesthetic", "DIY", "small space", "2025 trends"],
+        "image": "/blog-images/living-room.jpeg",
+        "theme": {
+          "background": "#1A1A1A",
+          "text": "#F9FAFB",
+          "accent": "#FBBF24"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Looking to refresh your living room without spending a fortune? These 10 budget-friendly decor ideas for 2025 will transform your space into a cozy, stylish haven. From affordable RoomVibe products to clever DIYs, these Pinterest-perfect tips work for small spaces and big vibes alike. Let’s dive into the ultimate living room glow-up!"
+          },
+          {
+            "type": "heading",
+            "text": "1. Cozy Knit Throw Blankets",
+            "url": "https://amzn.to/44nbt4G",
+            "temuUrl": "https://temu.to/k/ennkw6b3x1d",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oEg3Ao5",
+            "image": "/product-images/knit-throw.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Drape a chunky knit throw in neutral tones like beige or mustard over your sofa for instant warmth and texture. It’s an affordable way to add cozy, 2025 vibes."
+          },
+          {
+            "type": "heading",
+            "text": "2. Fairy Light Wall Display",
+            "url": "https://amzn.to/3GA4BqA",
+            "temuUrl": "https://temu.to/k/eg13b7apxur",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oE9EEID",
+            "image": "/product-images/fairy-light.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hang fairy lights with clips to create a glowing photo or art display on your living room wall. Perfect for a cozy, Instagram-ready focal point."
+          },
+          {
+            "type": "heading",
+            "text": "3. Floating Shelves with Plants",
+            "url": "https://amzn.to/3GtcmP4",
+            "temuUrl": "https://temu.to/k/e9wtdczeyn9",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_o2bSFod",
+            "image": "/product-images/floating-shelv.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Install floating shelves to display small potted plants and candles. Add fairy lights for a boho-chic touch that elevates small living rooms."
+          },
+          {
+            "type": "heading",
+            "text": "4. Sunset Lamp Accent Corner",
+            "url": "https://amzn.to/44BCFMT",
+            "temuUrl": "https://temu.to/k/egbp9gaozmr",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_olppKdx",
+            "image": "/product-images/sunset-lamp.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Place a sunset lamp in a corner with a thrifted rug and cushions for a warm, inviting nook. It’s a 2025 trend that’s budget-friendly and cozy."
+          },
+          {
+            "type": "heading",
+            "text": "5. DIY Macramé Wall Hanging",
+            "url": "https://amzn.to/3F0ctBd",
+            "temuUrl": "https://temu.to/k/e2q1tnleh50",
+            "image": "/product-images/macrame-hanging.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Craft a macramé wall hanging with affordable cord and beads. Hang above your sofa for a bohemian vibe that’s Pinterest-worthy and cheap."
+          },
+          {
+            "type": "heading",
+            "text": "6. Peel-and-Stick Wallpaper Accent",
+            "url": "https://amzn.to/4d2TbaX",
+            "image": "/product-images/peelandstick.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Apply peel-and-stick wallpaper to one wall for a bold, renter-friendly accent. Choose geometric or floral patterns for a trendy 2025 look."
+          },
+          {
+            "type": "heading",
+            "text": "7. Thrifted Mirror Gallery Wall",
+            "url": "https://amzn.to/3ECcYBC",
+            "temuUrl": "https://temu.to/k/e0qa7r7m51p",
+            "image": "/product-images/mirror-wall.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Collect thrifted mirrors in various shapes and arrange them into a gallery wall. This budget hack adds depth and elegance to any living room."
+          },
+          {
+            "type": "heading",
+            "text": "8. Woven Basket Storage",
+            "url": "https://amzn.to/4iKxw8Z",
+            "temuUrl": "https://temu.to/k/egz1fbc2047",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oFOOSl7",
+            "image": "/product-images/woven_basket.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Use woven baskets to store blankets or magazines. Stack them under a coffee table for a functional, aesthetic touch that’s super affordable."
+          },
+          {
+            "type": "heading",
+            "text": "9. LED Strip Light Shelving",
+            "url": "https://amzn.to/3ETVgcH",
+            "temuUrl": "https://temu.to/k/eylz3qd54sa",
+            "aliexpressUrl": "https://s.click.aliexpress.com/e/_oFTBSFP",
+            "image": "/product-images/led-strip-light-shelving.jpg"
+          },
+          {
+            "type": "paragraph",
+            "text": "Add LED strip lights to the back of shelves for a modern, glowing effect. It’s a cheap way to make your living room feel luxurious."
+          },
+          {
+            "type": "heading",
+            "text": "10. Velvet Cushion Covers",
+            "url": "https://amzn.to/4iIO5Sx",
+            "image": "/product-images/cushion-covers.webp"
+          },
+          {
+            "type": "paragraph",
+            "text": "Swap out old cushion covers for plush velvet ones in jewel tones like emerald or sapphire. It’s a budget-friendly way to add 2025’s luxe aesthetic."
+          }
+        ]
       }
   ]

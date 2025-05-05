@@ -1,4 +1,3 @@
-// app/vibe-feed/page.tsx
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../(components)/Header';
@@ -40,6 +39,11 @@ export const metadata: Metadata = {
 };
 
 export default function VibeFeed() {
+  // Sort posts by date (newest first)
+  const sortedBlogPosts = [...blogPosts].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -59,7 +63,7 @@ export default function VibeFeed() {
 
           {/* Blog Posts Grid */}
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" aria-label="Blog Posts">
-            {blogPosts.map((post) => (
+            {sortedBlogPosts.map((post) => (
               <article
                 key={post.id}
                 className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
@@ -73,7 +77,7 @@ export default function VibeFeed() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={post.id === blogPosts[0].id} // Prioritize first image for LCP
+                    priority={post.id === sortedBlogPosts[0].id} // Prioritize first image for LCP
                     itemProp="image"
                   />
                   <div className="absolute bottom-4 left-4 bg-pink-500 text-white text-xs px-3 py-1 rounded-full">
@@ -129,7 +133,7 @@ export default function VibeFeed() {
           </section>
 
           {/* Coming Soon Message */}
-          {blogPosts.length === 2 && (
+          {sortedBlogPosts.length === 2 && (
             <section className="text-center mt-20" aria-label="Coming Soon">
               <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
                 More Vibes Coming Soon..
@@ -147,28 +151,3 @@ export default function VibeFeed() {
     </div>
   );
 }
-
-// Structured Data for Blog (Added to Head via Script)
-// export function generateStructuredData() {
-//   const structuredData = {
-//     '@context': 'https://schema.org',
-//     '@type': 'Blog',
-//     name: 'Vibe Feed',
-//     description:
-//       'Curated inspiration, design secrets, and fresh vibes for your space.',
-//     url: 'https://roomvibe.vercel.app/vibefeed',
-//     blogPost: blogPosts.map((post) => ({
-//       '@type': 'BlogPosting',
-//       headline: post.title,
-//       description: post.description,
-//       datePublished: post.date,
-//       image: post.image,
-//       url: `https://roomvibe.vercel.app/vibefeed/${post.slug}`,
-//       author: {
-//         '@type': 'Organization',
-//         name: 'RoomVibe', 
-//       },
-//     })),
-//   };
-//   return structuredData;
-// }
