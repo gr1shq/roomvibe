@@ -16,6 +16,7 @@ interface BlogPostProps {
 const BlogCard = ({id, image, title, category, date, excerpt, slug}: BlogPostProps ) => {
   return (
     <div>
+      <Link href={`/vibefeed/${slug}`}>
         <div 
               key={id}
               className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
@@ -42,7 +43,7 @@ const BlogCard = ({id, image, title, category, date, excerpt, slug}: BlogPostPro
                 <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {excerpt}
                 </p>
-                <Link 
+                {/* <Link 
                   href={`/vibefeed/${slug}`}
                   className="inline-flex items-center text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
                 >
@@ -50,9 +51,10 @@ const BlogCard = ({id, image, title, category, date, excerpt, slug}: BlogPostPro
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </Link> */}
               </div>
             </div>
+            </Link>
     </div>
   )
 }

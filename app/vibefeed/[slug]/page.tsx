@@ -393,44 +393,57 @@ export default async function BlogPost({
             </div>
 
             {/* Related Posts */}
-            {relatedPosts.length > 0 && (
-              <div className="mt-12">
-                <h3
-                  className="text-2xl font-semibold mb-6"
-                  style={{ color: post.theme.accent }}
-                >
-                  More Vibe Inspiration
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {relatedPosts.map(relatedPost => (
-                    <Link
-                      key={relatedPost.id}
-                      href={`/vibefeed/${relatedPost.slug}`}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-                    >
-                      <div className="relative h-48 w-full">
-                        <Image
-                          src={relatedPost.image}
-                          alt={relatedPost.title}
-                          fill
-                          className="object-cover"
-                          quality={75}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h4 className="text-lg font-bold mb-2">{relatedPost.title}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
-                          {relatedPost.description}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
+{relatedPosts.length > 0 && (
+  <div className="mt-12">
+    <h3
+      className="text-2xl font-semibold mb-6"
+      style={{ color: post.theme.accent }}
+    >
+      More Vibe Inspiration
+    </h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {relatedPosts.map(relatedPost => (
+        <Link
+          key={relatedPost.id}
+          href={`/vibefeed/${relatedPost.slug}`}
+          className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[rgba(var(--theme-background),0.1)] backdrop-blur-md border border-[rgba(var(--theme-accent),0.2)]"
+          style={{
+            backgroundColor: `${post.theme.background}10`,
+            borderColor: `${post.theme.accent}20`,
+          }}
+          aria-label={`Read more about ${relatedPost.title}`}
+        >
+          <div className="relative h-48 w-full">
+            <Image
+              src={relatedPost.image}
+              alt={relatedPost.title}
+              fill
+              className="object-cover"
+              quality={75}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+            />
           </div>
+          <div className="p-3 sm:p-4">
+            <h4
+              className="text-base sm:text-lg font-bold mb-2"
+              style={{ color: post.theme.accent }}
+            >
+              {relatedPost.title}
+            </h4>
+            <p
+              className="text-xs sm:text-sm line-clamp-2"
+              style={{ color: `${post.theme.text}90` }}
+            >
+              {relatedPost.description}
+            </p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  </div>
+)}
+</div>
 
           {/* Table of Contents (Sticky on Desktop) */}
           {tableOfContents.length > 0 && (

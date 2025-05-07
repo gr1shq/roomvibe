@@ -70,6 +70,7 @@ export default function VibeFeed() {
                 itemScope
                 itemType="https://schema.org/BlogPosting"
               >
+                <Link href={`/vibefeed/${post.slug}`} itemProp="url">
                 <div className="relative h-48 w-full">
                   <Image
                     src={post.image}
@@ -106,7 +107,7 @@ export default function VibeFeed() {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3" itemProp="description">
                     {post.description}
                   </p>
-                  <Link
+                  {/* <Link
                     href={`/vibefeed/${post.slug}`}
                     className="inline-flex items-center text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
                     itemProp="url"
@@ -126,8 +127,9 @@ export default function VibeFeed() {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                  </Link>
+                  </Link> */}
                 </div>
+                </Link>
               </article>
             ))}
           </section>
