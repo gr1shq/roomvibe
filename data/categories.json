@@ -1,17 +1,17 @@
-    [
-    {
-      "id": 1,
-      "name": "LED Paradise",
-      "slug": "led-paradise",
-        "image": "/product-images/sunset-lamp.webp",
-      "description": "Glowing lights and LED accessories to vibe up your space.",
-      "theme": {
-        "background": "#0D0B1E",
-        "text": "#F5F3FF",
-        "accent": "#C084FC"
-      }
-    },
-      {
+[
+  {
+    "id": 1,
+    "name": "LED Paradise",
+    "slug": "led-paradise",
+    "image": "/product-images/sunset-lamp.webp",
+    "description": "Glowing lights and LED accessories to vibe up your space.",
+    "theme": {
+      "background": "#0D0B1E",
+      "text": "#F5F3FF",
+      "accent": "#C084FC"
+    }
+  },
+  {
     "id": 2,
     "name": "Cozy Room",
     "slug": "cozy-room",
@@ -35,28 +35,76 @@
       "accent": "#A5B4FC"
     }
   },
-    {
-      "id": 4,
-      "name": "Vibe Decor",
-      "slug": "vibe-decor",
-      "description": "Posters, candles, plants and more for your dream room.",
-        "image": "/category-images/vibe-decor.webp",
-      "theme": {
-        "background": "#1F1D2B",
-        "text": "#F8FAFC",
-        "accent": "#FB7185"
-      }
-    },
-    {
-      "id": 5,
-      "name": "Gamer Setup",
-      "slug": "gamer-setup",
-      "description": "RGB accessories and gear for the ultimate gaming vibe.",
-        "image": "/category-images/gamer-setup.webp",
-      "theme": {
-        "background": "#111827",
-        "text": "#F1F5F9",
-        "accent": "#38BDF7"
-      }
+  {
+    "id": 4,
+    "name": "Vibe Decor",
+    "slug": "vibe-decor",
+    "description": "Posters, candles, plants and more for your dream room.",
+    "image": "/category-images/vibe-decor.webp",
+    "theme": {
+      "background": "#1F1D2B",
+      "text": "#F8FAFC",
+      "accent": "#FB7185"
     }
-  ]
+  },
+  {
+    "id": 5,
+    "name": "Gamer Setup",
+    "slug": "gamer-setup",
+    "description": "RGB accessories and gear for the ultimate gaming vibe.",
+    "image": "/category-images/gamer-setup.webp",
+    "theme": {
+      "background": "#111827",
+      "text": "#F1F5F9",
+      "accent": "#38BDF7"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Coquette Aesthetic",
+    "slug": "coquette-aesthetic",
+    "image": "/category-images/coquette-decor.jpeg",
+    "description": "Romantic bows, pastels, and delicate decor for a dreamy, feminine vibe.",
+    "theme": {
+      "background": "#FFF0F5",
+      "text": "#4B2E39",
+      "accent": "#FF80BF"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Spring Refresh",
+    "slug": "spring-refresh",
+    "image": "/category-images/spring-decor.jpg",
+    "description": "Floral, pastel, and airy decor to bring spring’s fresh energy to your room.",
+    "theme": {
+      "background": "#E9F5E9",
+      "text": "#2A3D2A",
+      "accent": "#FFB7C5"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Small Space Solutions",
+    "slug": "small-space-solutions",
+    "image": "/category-images/small-room.jpg",
+    "description": "Clever, stylish decor for tiny rooms, perfect for dorms or apartments.",
+    "theme": {
+      "background": "#0F172A",
+      "text": "#F8FAFC",
+      "accent": "#34D399"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Bold & Bright",
+    "slug": "bold-and-bright",
+    "image": "/category-images/cherry-decor.jpg",
+    "description": "Vibrant decor in trendy colors like cherry red for a standout room.",
+    "theme": {
+      "background": "#2B0A0A",
+      "text": "#F9E6E6",
+      "accent": "#D90429"
+    }
+  }
+]
