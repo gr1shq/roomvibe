@@ -306,5 +306,158 @@
     "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_op5xTFH",
     "category": "Spring Refresh",
     "tags": ["basket", "seagrass", "spring", "storage"]
-  }
+  },
+    {
+      "id": 29,
+      "name": "RGB Mouse Pad (XL Size)",
+      "image": "/product-images/rgb-mousepad.jpg",
+      "price": "$19.99",
+      "affiliateLinkAmazon": "https://amzn.to/4d7tJRX",
+      "affiliateLinkTemu": "https://temu.to/k/e9rpu7710w0",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_opfMkEx",
+      "category": "Gamer Setup",
+      "tags": ["rgb", "mousepad", "desk", "gaming"]
+    },
+    {
+      "id": 30,
+      "name": "Ergonomic Gaming Chair",
+      "image": "/product-images/gaming-chair.jpg",
+      "price": "$149.99",
+      "affiliateLinkAmazon": "https://amzn.to/3Z8VaEZ",
+      "affiliateLinkTemu": "https://temu.to/k/erc40jgx576",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_ok1wxgx",
+      "category": "Gamer Setup",
+      "tags": ["chair", "ergonomic", "gaming", "comfort"]
+    },
+    {
+      "id": 31,
+      "name": "Hexagon LED Wall Panels",
+      "image": "/product-images/hexagon-led-wall.jpg",
+      "price": "$59.99",
+      "affiliateLinkAmazon": "https://amzn.to/452QsMJ",
+      "affiliateLinkTemu": "https://temu.to/k/e9cqfr842vk",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oE0R4Ht",
+      "category": "Gamer Setup",
+      "tags": ["hexagon", "led", "wall", "aesthetic"]
+    },
+    {
+      "id": 32,
+      "name": "Minimalist Headphone Stand",
+      "image": "/product-images/headphone-stand.jpg",
+      "price": "$19.99",
+      "affiliateLinkAmazon": "https://amzn.to/3H0SS4s",
+      "affiliateLinkTemu": "https://temu.to/k/epmlkiays02",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oE2cI7d",
+      "category": "Gamer Setup",
+      "tags": ["stand", "headphones", "desk", "minimalist"]
+    },
+    {
+      "id": 33,
+      "name": "Cable Management Kit",
+      "image": "/product-images/cable-managment-kit.jpg",
+      "price": "$12.99",
+      "affiliateLinkAmazon": "https://amzn.to/4m33Bvz",
+      "affiliateLinkTemu": "https://temu.to/k/e4quqb0d7o1",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oCYa3an",
+      "category": "Gamer Setup",
+      "tags": ["cable", "organizer", "desk", "clean"]
+    },
+    {
+      "id": 34,
+      "name": "Monitor Light Bar",
+      "image": "/product-images/monitor-light.webp",
+      "price": "$29.99",
+      "affiliateLinkAmazon": "https://amzn.to/44ZmJ7o",
+      "affiliateLinkTemu": "https://temu.to/k/ef805dy1z1y",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oCjD6yn",
+      "category": "Gamer Setup",
+      "tags": ["monitor", "light", "desk", "ergonomic"]
+    },
+    {
+      "id": 35,
+      "name": "Compact Desk Fan",
+      "image": "/product-images/desk-fan.jpg",
+      "price": "$15.99",
+      "affiliateLinkAmazon": "https://amzn.to/4kes9jx",
+      "affiliateLinkTemu": "https://temu.to/k/e8fhhxi5z2y",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oloL5Sf",
+      "category": "Gamer Setup",
+      "tags": ["fan", "desk", "cooling", "minimalist"]
+    },
+    {
+      "id": 36,
+      "name": "Digital Desk Clock",
+      "image": "/product-images/desk-clock.webp",
+      "price": "$19.99",
+      "affiliateLinkAmazon": "https://amzn.to/4iV4rYr",
+      "affiliateLinkTemu": "https://temu.to/k/e4yjhsz9ysh",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oB225qR",
+      "category": "Gamer Setup",
+      "tags": ["clock", "desk", "digital", "aesthetic"]
+    },
+    {
+      "id": 37,
+      "name": "Adjustable Microphone Arm",
+      "image": "/product-images/mic-arm.jpg",
+      "price": "$29.99",
+      "affiliateLinkAmazon": "https://amzn.to/3Z8WWG9",
+      "affiliateLinkTemu": "https://temu.to/k/ej92q9840fq",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_omlSdsj",
+      "category": "Gamer Setup",
+      "tags": ["mic", "streaming", "desk", "gaming"]
+    },
+    {
+      "id": 38,
+      "name": "Wooden Desk Organizer",
+      "image": "/product-images/desk-organizer2.webp",
+      "price": "$24.99",
+      "affiliateLinkAmazon": "https://amzn.to/43824LZ",
+      "affiliateLinkTemu": "https://temu.to/k/euyrhr9k32v",
+      "category": "Gamer Setup",
+      "tags": ["organizer", "desk", "wooden", "aesthetic"]
+    },
+    {
+      "id": 39,
+      "name": "Mechanical RGB Keyboard",
+      "image": "/product-images/rgb-keyboard.webp",
+      "price": "$79.99",
+      "affiliateLinkAmazon": "https://amzn.to/44vjzs2",
+      "affiliateLinkTemu": "https://temu.to/k/e2nj0mo1l51",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_omUwFAr",
+      "category": "Gamer Setup",
+      "tags": ["keyboard", "rgb", "mechanical", "gaming"]
+    },
+    {
+      "id": 40,
+      "name": "Aesthetic Mechanical Keyboard",
+      "image": "/product-images/mechanical-keyboard.jpg",
+      "price": "$69.99",
+      "affiliateLinkAmazon": "https://amzn.to/43lU23o",
+      "affiliateLinkTemu": "https://temu.to/k/eygqyhmdx07",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_opJMFzH",
+      "category": "Gamer Setup",
+      "tags": ["keyboard", "mechanical", "vintage", "aesthetic"]
+    },
+    {
+      "id": 41,
+      "name": "Stylish Mouse Pad (Large)",
+      "image": "/product-images/stylish-mousepad.jpg",
+      "price": "$14.99",
+      "affiliateLinkAmazon": "https://amzn.to/4jN0Mxa",
+      "affiliateLinkTemu": "https://temu.to/k/ejlhn85daa3",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_omAplGj",
+      "category": "Gamer Setup",
+      "tags": ["mousepad", "cloth", "desk", "minimalist"]
+    },
+    {
+      "id": 42,
+      "name": "Precision Gaming Mouse",
+      "image": "/product-images/gaming-mouse.jpg",
+      "price": "$39.99",
+      "affiliateLinkAmazon": "https://amzn.to/3YAq352",
+      "affiliateLinkTemu": "https://temu.to/k/e88ceok6dg7",
+      "affiliateLinkAliExpress": "https://s.click.aliexpress.com/e/_oF0pP47",
+      "category": "Gamer Setup",
+      "tags": ["mouse", "gaming", "precision", "ergonomic"]
+    }
 ]

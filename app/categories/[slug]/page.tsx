@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import Head from 'next/head';
 import categories from '../../../data/categories.json';
 import products from '../../../data/products_list.json';
 import ItemCard from '@/app/(components)/ItemCard';
@@ -24,6 +23,7 @@ interface Product {
   affiliateLinkAmazon: string;
   affiliateLinkTemu: string;
   affiliateLinkAliExpress: string;
+  tags?: string[]; // Add optional tags field
 }
 
 interface CategoryPageProps {
@@ -38,6 +38,7 @@ export async function generateStaticParams() {
   }));
 }
 
+
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
   const category = categories.find((category: Category) => category.slug === slug) as Category | undefined;
@@ -46,25 +47,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const allProducts = products
+
+
+  const allProducts = (products as Product[]) // Optional type assertion for extra safety
     .filter((product: Product) => product.category === category.name)
-    .slice(0, 12); // Cap at 12 products
+    // .slice(0, 12);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <Head>
-        <title>{`${category.name} | RoomVibe Aesthetic Decor`}</title>
-        <meta
-          name="description"
-          content={`Discover ${category.name} decor at RoomVibe. ${category.description}`}
-        />
-        <meta
-          name="keywords"
-          content={`${category.name.toLowerCase()}, aesthetic room decor, RGB lights, cozy essentials`}
-        />
-        <link rel="canonical" href={`https://www.roomvibe.vercel.app/categories/${slug}`} />
-      </Head>
-
       <Header />
 
       <main className="flex-grow">
