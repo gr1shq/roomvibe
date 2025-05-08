@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface BlogPostProps {
-  id: number;
   image: string;
   title: string;
   category: string;
@@ -11,7 +10,7 @@ interface BlogPostProps {
   slug: string;
 }
 
-const BlogCard = ({ id, image, title, category, date, excerpt, slug }: BlogPostProps) => {
+const BlogCard = ({ image, title, category, date, excerpt, slug }: BlogPostProps) => {
   return (
     <Link href={`/vibefeed/${slug}`}>
       <div
