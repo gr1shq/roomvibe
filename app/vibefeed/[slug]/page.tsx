@@ -1,24 +1,20 @@
-// app/vibefeed/[slug]/page.tsx
 import Header from '@/app/(components)/Header';
 import Footer from '@/app/(components)/Footer';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Head from 'next/head';
 import blogPosts from '../../../data/blog_post.json';
 
-// Define a type for content items
 type ContentItem = {
   type: 'heading' | 'paragraph';
   text: string;
   url?: string;
-  temuUrl?: string; // Optional Temu link
-  aliexpressUrl?: string; // Optional AliExpress link
+  temuUrl?: string;
+  aliexpressUrl?: string;
   image?: string;
 };
 
-// Define the BlogPost interface
 interface BlogPost {
   id: number;
   slug: string;
@@ -29,24 +25,16 @@ interface BlogPost {
   category: string;
   tags: string[];
   image: string;
-  theme: {
-    background: string;
-    text: string;
-    accent: string;
-  };
+  theme: { background: string; text: string; accent: string };
   content: ContentItem[];
 }
 
-// Type the blogPosts import
 const typedBlogPosts: BlogPost[] = blogPosts as BlogPost[];
 
 export async function generateStaticParams() {
-  return typedBlogPosts.map(post => ({
-    slug: post.slug,
-  }));
+  return typedBlogPosts.map(post => ({ slug: post.slug }));
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({
   params,
 }: {
@@ -56,9 +44,7 @@ export async function generateMetadata({
   const post = typedBlogPosts.find(post => post.slug === slug);
 
   if (!post) {
-    return {
-      title: 'Post Not Found | RoomVibe',
-    };
+    return { title: 'Post Not Found | RoomVibe' };
   }
 
   return {
@@ -70,14 +56,7 @@ export async function generateMetadata({
       description: post.description,
       url: `https://roomvibe.vercel.app/vibefeed/${slug}`,
       type: 'article',
-      images: [
-        {
-          url: post.image,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -103,7 +82,6 @@ export default async function BlogPost({
     notFound();
   }
 
-  // Generate Table of Contents from headings
   const tableOfContents = post.content
     .filter(item => item.type === 'heading')
     .map(item => ({
@@ -111,88 +89,35 @@ export default async function BlogPost({
       id: item.text.toLowerCase().replace(/\s+/g, '-'),
     }));
 
-  // Find related posts (exclude current post)
   const relatedPosts = typedBlogPosts
     .filter(p => p.id !== post.id && p.category === post.category)
     .slice(0, 3);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Structured Data */}
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
-              headline: post.title,
-              description: post.description,
-              datePublished: post.date,
-              image: post.image,
-              url: `https://roomvibe.vercel.app/vibefeed/${slug}`,
-              author: {
-                '@type': 'Organization',
-                name: 'RoomVibe',
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'RoomVibe',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://roomvibe.vercel.app/logo.png', // Replace with actual logo
-                },
-              },
-            }),
-          }}
-        />
-      </Head>
-
-      <header>
-        <Header />
-      </header>
-
-      <main
-        className="flex-grow"
-        style={{
-          backgroundColor: post.theme.background,
-          color: post.theme.text,
-        }}
-      >
+    <div className="flex flex-col min-h-screen bg-white">
+      <Header />
+      <main className="flex-grow">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row gap-8">
-          {/* Main Content */}
           <div className="flex-1">
-            {/* Back Button */}
+            <nav className="mb-4 text-sm text-gray-600">
+              <Link href="/" className="hover:text-pink-600">Home</Link> {' '}
+              <Link href="/vibefeed" className="hover:text-pink-600">Vibe Feed</Link>{' '}
+              <span>{post.title}</span>
+            </nav>
             <Link
               href="/vibefeed"
-              className="flex items-center mb-8 hover:underline text-lg font-medium"
-              style={{ color: post.theme.accent }}
+              className="flex items-center mb-8 text-pink-600 hover:underline text-lg font-medium"
             >
               ← Back to Vibe Feed
             </Link>
-
-            {/* Article Header */}
             <div className="mb-12">
-              <span
-                className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-                style={{
-                  backgroundColor: `${post.theme.accent}20`,
-                  color: post.theme.accent,
-                }}
-              >
+              <span className="inline-block px-3 py-1 bg-pink-600 text-white text-sm font-medium rounded-full mb-4">
                 {post.category}
               </span>
-              <h1
-                className="text-4xl md:text-5xl font-bold mb-4"
-                style={{ color: post.theme.text }}
-              >
+              <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
                 {post.title}
               </h1>
-
-              <div
-                className="flex flex-wrap items-center gap-4 mb-6 text-sm"
-                style={{ color: `${post.theme.text}90` }}
-              >
+              <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-600">
                 <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -202,75 +127,74 @@ export default async function BlogPost({
                 </time>
                 <span>{post.author}</span>
               </div>
-
-              {/* Featured Image */}
-              <div className="relative h-64 md:h-80 w-full rounded-xl overflow-hidden mb-8">
+              <div className="relative h-64 md:h-80 w-full rounded-md overflow-hidden mb-8">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover"
+                  className="object-cover opacity-90"
                   quality={85}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 1200px"
                   priority
                 />
               </div>
             </div>
-
-            {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
+            {tableOfContents.length >= 4 && (
+              <div className="block lg:hidden mb-8 p-3 rounded-md bg-gray-50 border-t border-gray-200">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">Table of Contents</h3>
+                <ul className="space-y-1.5">
+                  {tableOfContents.map(item => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        className="block text-xs text-gray-600 hover:text-pink-600 transition-colors duration-200"
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="prose prose-lg max-w-none text-gray-900 bg-gradient-to-r from-pink-50 to-white rounded-md p-6">
               {post.content.map((item, index) => {
                 const itemId = item.type === 'heading' ? item.text.toLowerCase().replace(/\s+/g, '-') : undefined;
                 return (
-                  <div key={index} id={itemId} className="mb-6">
+                  <div key={index} id={itemId} className="mb-10">
                     {item.type === 'heading' && (
-                      <div className="mt-8 mb-4 flex flex-col items-start gap-4">
-                        {item.url ? (
-                          <a
-                            href={item.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-2xl font-bold hover:underline"
-                            style={{ color: post.theme.accent }}
-                          >
-                            {item.text}
-                          </a>
-                        ) : (
-                          <h2
-                            className="text-2xl font-bold"
-                            style={{ color: post.theme.accent }}
-                          >
-                            {item.text}
-                          </h2>
-                        )}
+                      <div className="mt-12 mb-8 flex flex-col items-start gap-4">
+                        <h2 className="text-2xl font-semibold text-gray-900">{item.text}</h2>
                         {item.image && (
-                          <div className="relative w-48 h-48 mx-auto my-4 rounded-xl overflow-hidden">
+                          <div className="relative w-64 h-64 mx-auto my-6 rounded-lg overflow-hidden">
                             <Image
-                              src={item.image || '/product-images/strip-light2.webp'}
+                              src={item.image}
                               alt={item.text}
                               fill
                               className="object-contain"
                               quality={75}
-                              sizes="192px"
+                              sizes="256px"
                               loading="lazy"
                             />
                           </div>
                         )}
-                        {/* Affiliate Buttons */}
                         {(item.url || item.temuUrl || item.aliexpressUrl) && (
-                          <div className="flex flex-wrap gap-3">
+                          <div className="flex flex-wrap gap-2">
                             {item.url && (
                               <a
                                 href={item.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium"
-                                style={{
-                                  backgroundColor: post.theme.accent,
-                                  color: post.theme.text,
-                                }}
+                                className={`inline-flex items-center gap-1.5 p-1.5 rounded-md border border-pink-600 hover:bg-pink-100 active:bg-pink-200 hover:scale-105 transition-all duration-200 ${index === 1 || index === post.content.length - 2 ? 'bg-pink-50' : ''}`}
+                                title="Shop on Amazon"
                               >
-                                Shop on Amazon
+                                <Image
+                                  src="/img/amazon-logo.jpg"
+                                  alt="Amazon"
+                                  width={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  height={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  className="object-contain"
+                                />
+                                <span className="text-xs font-medium text-pink-600 hover:underline">Shop</span>
                               </a>
                             )}
                             {item.temuUrl && (
@@ -278,13 +202,17 @@ export default async function BlogPost({
                                 href={item.temuUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium"
-                                style={{
-                                  backgroundColor: '#F97316', // Temu orange
-                                  color: '#FFFFFF',
-                                }}
+                                className={`inline-flex items-center gap-1.5 p-1.5 rounded-md border border-pink-600 hover:bg-pink-100 active:bg-pink-200 hover:scale-105 transition-all duration-200 ${index === 1 || index === post.content.length - 2 ? 'bg-pink-50' : ''}`}
+                                title="Shop on Temu"
                               >
-                                Shop on Temu
+                                <Image
+                                  src="/img/temu-logo.png"
+                                  alt="Temu"
+                                  width={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  height={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  className="object-contain"
+                                />
+                                <span className="text-xs font-medium text-pink-600 hover:underline">Shop</span>
                               </a>
                             )}
                             {item.aliexpressUrl && (
@@ -292,13 +220,17 @@ export default async function BlogPost({
                                 href={item.aliexpressUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium"
-                                style={{
-                                  backgroundColor: '#E11D48', // AliExpress red
-                                  color: '#FFFFFF',
-                                }}
+                                className={`inline-flex items-center gap-1.5 p-1.5 rounded-md border border-pink-600 hover:bg-pink-100 active:bg-pink-200 hover:scale-105 transition-all duration-200 ${index === 1 || index === post.content.length - 2 ? 'bg-pink-50' : ''}`}
+                                title="Shop on AliExpress"
                               >
-                                Shop on AliExpress
+                                <Image
+                                  src="/img/aliexpress-logo.jpeg"
+                                  alt="AliExpress"
+                                  width={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  height={index === 1 || index === post.content.length - 2 ? 32 : 24}
+                                  className="object-contain"
+                                />
+                                <span className="text-xs font-medium text-pink-600 hover:underline">Shop</span>
                               </a>
                             )}
                           </div>
@@ -306,28 +238,26 @@ export default async function BlogPost({
                       </div>
                     )}
                     {item.type === 'paragraph' && (
-                      <p
-                        className="mb-4 leading-relaxed"
-                        style={{ color: post.theme.text }}
-                      >
-                        {item.text}
+                      <p className="mb-6 leading-relaxed text-gray-600">
+                        {index === 1 && item.type === 'paragraph' ? (
+                          <span className="block text-lg italic text-pink-600 border-l-4 border-pink-600 pl-4">
+                            {item.text}
+                          </span>
+                        ) : (
+                          item.text
+                        )}
                       </p>
+                    )}
+                    {index < post.content.length - 1 && item.type !== 'heading' && (
+                      <hr className="my-6 border-gray-200" />
                     )}
                   </div>
                 );
               })}
             </div>
-
-            {/* Tags */}
             {post.tags && post.tags.length > 0 && (
-              <div
-                className="mt-12 pt-8 border-t"
-                style={{ borderColor: `${post.theme.text}20` }}
-              >
-                <div
-                  className="flex items-center mb-4 text-sm"
-                  style={{ color: `${post.theme.text}90` }}
-                >
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <div className="flex items-center mb-4 text-sm text-gray-600">
                   <span>Tags:</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -335,11 +265,7 @@ export default async function BlogPost({
                     <Link
                       key={tag}
                       href={`/vibefeed?tag=${encodeURIComponent(tag)}`}
-                      className="px-3 py-1 rounded-full text-sm hover:underline"
-                      style={{
-                        backgroundColor: `${post.theme.accent}20`,
-                        color: post.theme.accent,
-                      }}
+                      className="px-3 py-1 bg-pink-600 text-white text-sm rounded-full hover:bg-pink-500 active:bg-pink-600 transition-colors duration-200"
                     >
                       #{tag}
                     </Link>
@@ -347,115 +273,94 @@ export default async function BlogPost({
                 </div>
               </div>
             )}
-
-            {/* CTA Section */}
-            <div
-              className="mt-12 p-8 rounded-lg shadow-lg"
-              style={{ backgroundColor: `${post.theme.accent}10` }}
-            >
-              <h3
-                className="text-2xl font-semibold mb-4"
-                style={{ color: post.theme.accent }}
-              >
+            <div className="mt-12 p-6 rounded-md bg-pink-50">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Inspired by This Vibe?
               </h3>
-              <p className="mb-6 text-lg" style={{ color: post.theme.text }}>
-                Shop our curated collection of aesthetic decor and RGB lights to bring this look to your space!
+              <p className="mb-6 text-base text-gray-600">
+                Shop our curated collection of aesthetic decor to bring this look to your space!
               </p>
               <div className="flex flex-wrap gap-4">
-                {/* <Link
-                  href="/shop" // Replace with actual shop page URL
-                  className="px-6 py-3 rounded-full text-lg font-medium"
-                  style={{ backgroundColor: post.theme.accent, color: post.theme.text }}
+                <a
+                  href={post.content.find(item => item.type === 'heading' && item.url)?.url || 'https://amzn.to/default'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 active:bg-pink-600 hover:scale-105 transition-all duration-200"
                 >
-                  Shop RoomVibe
-                </Link> */}
+                  Shop Top Picks
+                </a>
+                <Link
+                  href="/categories"
+                  className="px-6 py-3 text-base font-medium text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 active:bg-pink-100 transition-all duration-200"
+                >
+                  Explore Categories
+                </Link>
                 <Link
                   href="/vibefeed"
-                  className="px-6 py-3 rounded-full text-lg font-medium border"
-                  style={{
-                    borderColor: post.theme.accent,
-                    color: post.theme.accent,
-                  }}
+                  className="px-6 py-3 text-base font-medium text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 active:bg-pink-100 transition-all duration-200"
                 >
-                  More VibeFeed Posts
+                  More Vibe Feed Posts
                 </Link>
                 <a
                   href={`https://x.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://roomvibe.vercel.app/vibefeed/${slug}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-full text-lg font-medium"
-                  style={{ backgroundColor: post.theme.text, color: post.theme.background }}
+                  className="px-6 py-3 text-base font-medium text-white bg-gray-900 rounded-md hover:bg-gray-800 active:bg-gray-900 transition-all duration-200"
                 >
                   Share on X
                 </a>
               </div>
             </div>
-
-            {/* Related Posts */}
-{relatedPosts.length > 0 && (
-  <div className="mt-12">
-    <h3
-      className="text-2xl font-semibold mb-6"
-      style={{ color: post.theme.accent }}
-    >
-      More Vibe Inspiration
-    </h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {relatedPosts.map(relatedPost => (
-        <Link
-          key={relatedPost.id}
-          href={`/vibefeed/${relatedPost.slug}`}
-          className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[rgba(var(--theme-background),0.1)] backdrop-blur-md border border-[rgba(var(--theme-accent),0.2)]"
-          style={{
-            backgroundColor: `${post.theme.background}10`,
-            borderColor: `${post.theme.accent}20`,
-          }}
-          aria-label={`Read more about ${relatedPost.title}`}
-        >
-          <div className="relative h-48 w-full">
-            <Image
-              src={relatedPost.image}
-              alt={relatedPost.title}
-              fill
-              className="object-cover"
-              quality={75}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="lazy"
-            />
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6 bg-gradient-to-r from-pink-50 to-white rounded-md p-3">More Vibe Inspiration</h3>
+                <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 scrollbar-hide">
+                  {relatedPosts.map(relatedPost => (
+                    <Link
+                      key={relatedPost.id}
+                      href={`/vibefeed/${relatedPost.slug}`}
+                      className="snap-start flex-shrink-0 w-[240px] sm:w-[280px] bg-white rounded-md shadow-sm hover:scale-105 active:scale-95 transition-transform duration-200"
+                    >
+                      <div className="relative h-56 w-full">
+                        <Image
+                          src={relatedPost.image}
+                          alt={relatedPost.title}
+                          fill
+                          className="object-cover rounded-t-md opacity-90"
+                          quality={75}
+                          sizes="280px"
+                          loading="lazy"
+                        />
+                        <span className="absolute top-2 left-2 px-2 py-0.5 bg-pink-600 text-white text-xs font-medium rounded-full">
+                          {relatedPost.category}
+                        </span>
+                      </div>
+                      <div className="p-4">
+                        <h4 className="text-base font-medium text-gray-900 mb-2 group-hover:text-pink-600 transition-colors duration-200">
+                          {relatedPost.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 line-clamp-2">{relatedPost.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+            {relatedPosts.length === 0 && (
+              <div className="mt-12 text-center">
+                <p className="text-base text-gray-600">
+                  No related posts yet.{' '}
+                  <Link href="/vibefeed" className="text-pink-600 hover:underline font-medium">
+                    Explore all Vibe Feed posts
+                  </Link>
+                </p>
+              </div>
+            )}
           </div>
-          <div className="p-3 sm:p-4">
-            <h4
-              className="text-base sm:text-lg font-bold mb-2"
-              style={{ color: post.theme.accent }}
-            >
-              {relatedPost.title}
-            </h4>
-            <p
-              className="text-xs sm:text-sm line-clamp-2"
-              style={{ color: `${post.theme.text}90` }}
-            >
-              {relatedPost.description}
-            </p>
-          </div>
-        </Link>
-      ))}
-    </div>
-  </div>
-)}
-</div>
-
-          {/* Table of Contents (Sticky on Desktop) */}
           {tableOfContents.length > 0 && (
             <aside className="lg:w-64 lg:sticky lg:top-24 lg:self-start hidden lg:block">
-              <div
-                className="p-6 rounded-lg shadow-md"
-                style={{ backgroundColor: `${post.theme.text}10` }}
-              >
-                <h3
-                  className="text-lg font-semibold mb-4"
-                  style={{ color: post.theme.accent }}
-                >
+              <div className="p-6 rounded-md bg-gray-50">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   Table of Contents
                 </h3>
                 <ul className="space-y-2">
@@ -463,8 +368,7 @@ export default async function BlogPost({
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="block text-sm hover:underline"
-                        style={{ color: post.theme.text }}
+                        className="block text-sm text-gray-600 hover:text-pink-600 transition-colors duration-200"
                       >
                         {item.text}
                       </a>
@@ -476,10 +380,7 @@ export default async function BlogPost({
           )}
         </div>
       </main>
-
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

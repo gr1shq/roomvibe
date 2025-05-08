@@ -2,9 +2,7 @@
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const WhyRoomVibe = () => {
   const [ref, inView] = useInView({
@@ -12,131 +10,58 @@ const WhyRoomVibe = () => {
     threshold: 0.1,
   });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
+  const variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: 'easeOut',
       },
     },
   };
 
-  const cardData = [
-    {
-      title: 'Curated Vibe Picks',
-      description: 'Only the most aesthetic and unique items make the cut. We choose products that elevate your space.',
-      image: '/product-images/sunset-lamp.webp', // sunset image
-      ctaLink: '/vibefeed',
-      ctaText: 'Discover Vibe Posts',
-    },
-    {
-      title: 'Smart, Affordable Finds',
-      description: 'We find budget-friendly gear that looks like a million bucks.',
-      image: 'https://m.media-amazon.com/images/I/71ztyMMelJL.__AC_SX300_SY300_QL70_FMwebp_.jpg', // neon image
-      ctaLink: '/vibefeed',
-      ctaText: 'Explore Budget Tips',
-    },
-    {
-      title: 'Fast & Easy to Browse',
-      description: 'No endless scrolling. Find your vibe fast with smooth categories and clean design.',
-      image: '/product-images/desk-shelf.webp', 
-      ctaLink: '/categories', 
-      ctaText: 'Browse Categories',
-    },
-  ];
-
   return (
-    <div
+    <section
       ref={ref}
-      className="min-h-[60vh] text-[#f5f5f5] py-20 px-6 bg-gradient-to-b from-[#1a102a] to-[#2a1a4a]"
+      className="bg-pink-50 py-12 md:py-16 px-4 sm:px-6 lg:px-8"
+      aria-label="Why RoomVibe"
     >
       <motion.div
-        className="max-w-6xl mx-auto flex flex-col items-center"
-        variants={containerVariants}
+        className="max-w-3xl mx-auto text-center"
+        variants={variants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        {/* Header Section */}
-        <motion.h1
-          className="text-center text-4xl font-bold mb-4"
-          variants={itemVariants}
+        <svg
+          className="w-12 h-12 mx-auto mb-4 text-pink-600"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
         >
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+        </svg>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Why RoomVibe?
-        </motion.h1>
-
-        <motion.h2
-          className="text-center text-2xl mb-12 max-w-3xl"
-          variants={itemVariants}
-        >
-          We handpick the most aesthetic,{' '}
-          <span className="font-bold text-[#d367e1]">affordable,</span> and cozy room{' '}
-          <span className="font-bold text-[#d367e1]">finds</span> — so you do not have to.
-        </motion.h2>
-
-        {/* Feature Cards Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full"
-          variants={containerVariants}
-        >
-          {cardData.map((card, index) => (
-            <Tilt
-              key={index}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              perspective={1000}
-              scale={1.05}
-              transitionSpeed={300}
-            >
-              <motion.div
-                className="bg-[#2a1a4a]/30 backdrop-blur-md rounded-xl p-6 border border-[#3d2a5a]/50 hover:border-[#d367e1]/70 transition-all duration-300 hover:shadow-lg hover:shadow-[#d367e1]/20"
-                variants={itemVariants}
-                style={{
-                  background: `linear-gradient(135deg, #2a1a4a22, #3d2a5a22)`,
-                }}
-              >
-                {/* Card Image */}
-                <div className="relative w-16 h-16 mb-4 mx-auto">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    className="object-cover rounded-full transform transition-transform duration-300 hover:scale-110"
-                  />
-                </div>
-
-                {/* Card Content */}
-                <h3 className="text-xl font-bold mb-2 text-[#f5f5f5]">{card.title}</h3>
-                <p className="text-[#e0d7ff] mb-4 text-sm leading-6">
-                  {card.description}
-                </p>
-
-                {/* CTA Button */}
-                <Link
-                  href={card.ctaLink}
-                  className="inline-block px-4 py-2 text-sm font-medium rounded-full transition-colors hover:bg-[#d367e1]/80"
-                  style={{ backgroundColor: '#d367e1', color: '#f5f5f5' }}
-                >
-                  {card.ctaText}
-                </Link>
-              </motion.div>
-            </Tilt>
-          ))}
+        </h2>
+        <p className="text-lg text-gray-600 mb-8">
+          At RoomVibe, we curate <span className="font-semibold text-pink-600">aesthetic products</span> and{' '}
+          <span className="font-semibold text-pink-600">inspirational ideas</span> to help you create a space that reflects your unique style. Discover handpicked decor, lighting, and more, designed to elevate your room into a vibe that’s all your own.
+        </p>
+        <motion.div variants={variants}>
+          <Image
+            src="/category-images/coquette-decor.jpeg"
+            alt="Aesthetic room with curated decor"
+            width={600}
+            height={400}
+            className="mx-auto rounded-lg shadow-sm opacity-90"
+            sizes="(max-width: 768px) 100vw, 600px"
+            loading="lazy"
+          />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

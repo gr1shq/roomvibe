@@ -1,62 +1,50 @@
-import Image from "next/image"
-import Link from "next/link"
-
+import Image from "next/image";
+import Link from "next/link";
 
 interface BlogPostProps {
-    id: number
-    image: string
-    title: string
-    category: string
-    date: string
-    excerpt: string
-    slug: string
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+  date: string;
+  excerpt: string;
+  slug: string;
 }
 
-
-const BlogCard = ({id, image, title, category, date, excerpt, slug}: BlogPostProps ) => {
+const BlogCard = ({ id, image, title, category, date, excerpt, slug }: BlogPostProps) => {
   return (
-    <div>
-      <Link href={`/vibefeed/${slug}`}>
-        <div 
-              key={id}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute bottom-4 left-4 bg-pink-500 text-white text-xs px-3 py-1 rounded-full">
-                  {category}
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <span className="text-sm text-gray-500 dark:text-gray-400">
-                  {date}
-                </span>
-                <h2 className="text-xl font-bold text-gray-800 dark:text-white mt-2 mb-3 line-clamp-2">
-                  {title}
-                </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
-                  {excerpt}
-                </p>
-                {/* <Link 
-                  href={`/vibefeed/${slug}`}
-                  className="inline-flex items-center text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 font-medium transition-colors"
-                >
-                  Read More
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link> */}
-              </div>
-            </div>
-            </Link>
-    </div>
-  )
-}
+    <Link href={`/vibefeed/${slug}`}>
+      <div
+        className="w-[280px] sm:w-[320px] rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+      >
+        {/* Image Container */}
+        <div className="relative h-48 w-full group">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover rounded-t-lg"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-pink-600/0 group-hover:bg-pink-600/10 transition-all duration-300"></div>
+          <span className="absolute bottom-3 left-3 px-2 py-1 bg-pink-100 text-pink-800 text-xs font-medium rounded-full">
+            {category}
+          </span>
+        </div>
 
-export default BlogCard
+        {/* Content */}
+        <div className="p-4">
+          <p className="text-sm text-gray-600 mb-1">{date}</p>
+          <h2 className="text-lg font-semibold text-gray-900 line-clamp-2 mb-2">{title}</h2>
+          <p className="text-sm text-gray-600 line-clamp-3 mb-3">{excerpt}</p>
+          <span className="text-sm text-pink-600 font-medium hover:underline">
+            Read More
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+export default BlogCard;

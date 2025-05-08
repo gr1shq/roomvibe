@@ -4,7 +4,6 @@ import Header from './(components)/Header';
 import CategoriesSection from './(sections)/CategoriesSection';
 import HeroSection from './(sections)/Hero';
 import Slide from './(sections)/Slide';
-import VibeFeedSection from './(sections)/VibeFeedSection';
 import WhyRoomVibe from './(sections)/WhyRoomVibe';
 import { Metadata } from 'next';
 import Head from 'next/head';
@@ -94,11 +93,8 @@ export default function Home() {
         <section aria-label="Product Categories">
           <CategoriesSection />
         </section>
-        <section aria-label="Why RoomVibe" className="bg-gray-50 dark:bg-gray-900">
-          <WhyRoomVibe />
-        </section>
         <section>
-          <VibeFeedSection />
+          <WhyRoomVibe />
         </section>
       </main>
 
