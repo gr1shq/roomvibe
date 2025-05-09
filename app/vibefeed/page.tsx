@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://roomvibe.vercel.app/img/coquette-decor.jpeg', // Updated to match aesthetic
+        url: 'https://roomvibe.vercel.app/img/coquette-decor.jpeg', 
         width: 1200,
         height: 630,
         alt: 'RoomVibe Vibe Feed',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 // Sort posts server-side (newest first)
 const sortedBlogPosts = [...blogPosts]
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 6); // Cap at 6 posts
+  .slice(0, 9); // Cap at 9 posts
 
 export default function VibeFeed() {
   return (

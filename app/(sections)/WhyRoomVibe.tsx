@@ -34,14 +34,13 @@ const WhyRoomVibe = () => {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        <svg
-          className="w-12 h-12 mx-auto mb-4 text-pink-600"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-        </svg>
+        <Image
+          src="/img/cat-icon.png"
+          alt="RoomVibe Logo"
+          width={150}
+          height={150}
+          className="mx-auto mb-4"
+        />    
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Why RoomVibe?
         </h2>

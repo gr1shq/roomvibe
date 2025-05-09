@@ -166,6 +166,7 @@ export default async function BlogPost({
                         <h2 className="text-2xl font-semibold text-gray-900">{item.text}</h2>
                         {item.image && (
                           <div className="relative w-64 h-64 mx-auto my-6 rounded-lg overflow-hidden">
+                            <a href={item.url} target="_blank" rel="noopener noreferrer">
                             <Image
                               src={item.image}
                               alt={item.text}
@@ -175,6 +176,7 @@ export default async function BlogPost({
                               sizes="256px"
                               loading="lazy"
                             />
+                            </a>
                           </div>
                         )}
                         {(item.url || item.temuUrl || item.aliexpressUrl) && (
