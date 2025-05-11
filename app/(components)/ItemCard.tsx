@@ -12,7 +12,7 @@ interface ItemCardProps {
 }
 
 const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, temuLink }: ItemCardProps) => (
-  <div className="bg-white rounded-md shadow-sm w-[260px] sm:w-[300px] min-h-[400px] flex flex-col hover:scale-105 transition-transform duration-300">
+  <div className="bg-white rounded-md shadow-sm w-[260px] sm:w-[300px] min-h-[400px] flex flex-col transition-transform duration-300">
     <Image
       src={img}
       alt={title}
@@ -24,16 +24,19 @@ const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, tem
     <div className="p-4 flex-1 flex flex-col justify-between">
       <div>
         <h3 className="text-lg font-medium text-gray-900 line-clamp-2">{title}</h3>
-        <p className="text-sm text-gray-600">{category}</p>
-        <p className="text-base font-semibold text-gray-900">{price}</p>
+        <p className="text-sm text-gray-600 mt-1">{category}</p>
+        <p className="text-base font-semibold text-gray-900 mt-1">{price}</p>
+        <p className="text-sm italic text-gray-500 mt-1">Prices are approximate and may vary by seller.</p>
       </div>
-      <div className="flex gap-2 flex-wrap mt-2">
+      <div className="flex gap-3 flex-wrap mt-4">
         {amazonLink && (
           <Link
             target="_blank"
             href={amazonLink}
-            className="inline-block px-3 py-1 text-sm font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 transition-colors duration-300"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 hover:scale-105 transition-all duration-300 shadow-sm"
+            aria-label={`Buy ${title} on Amazon`}
           >
+            <Image src="/img/amazon-logo.jpg" alt="Amazon" width={20} height={20} className="mr-2" />
             Amazon
           </Link>
         )}
@@ -41,8 +44,10 @@ const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, tem
           <Link
             target="_blank"
             href={temuLink}
-            className="inline-block px-3 py-1 text-sm font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 transition-colors duration-300"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-md hover:bg-red-600 hover:scale-105 transition-all duration-300 shadow-sm"
+            aria-label={`Buy ${title} on Temu`}
           >
+            <Image src="/img/temu-logo.png" alt="Temu" width={20} height={20} className="mr-2" />
             Temu
           </Link>
         )}
@@ -50,8 +55,10 @@ const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, tem
           <Link
             target="_blank"
             href={aliexpressLink}
-            className="inline-block px-3 py-1 text-sm font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 transition-colors duration-300"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 hover:scale-105 transition-all duration-300 shadow-sm"
+            aria-label={`Buy ${title} on AliExpress`}
           >
+            <Image src="/img/aliexpress-logo.jpeg" alt="AliExpress" width={20} height={20} className="mr-2" />
             AliExpress
           </Link>
         )}

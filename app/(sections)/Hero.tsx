@@ -7,9 +7,31 @@ import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
 
+  // Define carousel images
+  const images = [
+    {
+      src: '/blog-images/girl-room.webp',
+      alt: 'Vibrant gaming setup with RGB LED lights and desk accessories',
+    },
+    {
+      src: '/blog-images/small-space-decor.jpg',
+      alt: 'Cozy bedroom with soft decor and warm LED lighting',
+    },
+    {
+      src: '/blog-images/teen-bedroom.jpg',
+      alt: 'Minimalist desk setup with sleek decor and LED monitor light',
+    },
+  ];
+
+  // Set up carousel interval
   useEffect(() => {
     setIsMounted(true);
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000); // Change every 5 seconds
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -47,16 +69,21 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image Carousel */}
         <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-96 mt-6 md:mt-0">
-          <Image
-            src="/blog-images/girl-room.webp"
-            alt="Trendy teen room with LED lights and cozy decor"
-            fill
-            className="object-cover rounded-lg shadow-sm"
-            quality={85}
-            priority
-          />
+          {images.map((img, index) => (
+            <Image
+              key={img.src}
+              src={img.src}
+              alt={img.alt}
+              fill
+              className={`object-cover rounded-lg shadow-sm transition-opacity duration-1000 ${
+                index === currentImage ? 'opacity-100' : 'opacity-0'
+              } absolute`}
+              quality={85}
+              priority={index === 0} // Priority for first image only
+            />
+          ))}
         </div>
       </div>
 

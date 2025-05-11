@@ -5,6 +5,7 @@ import ItemCard from '@/app/(components)/ItemCard';
 import Footer from '@/app/(components)/Footer';
 import Header from '@/app/(components)/Header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Category {
   id: number;
@@ -23,7 +24,7 @@ interface Product {
   affiliateLinkAmazon: string;
   affiliateLinkTemu: string;
   affiliateLinkAliExpress: string;
-  tags?: string[]; // Add optional tags field
+  tags?: string[];
 }
 
 interface CategoryPageProps {
@@ -38,7 +39,6 @@ export async function generateStaticParams() {
   }));
 }
 
-
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params;
   const category = categories.find((category: Category) => category.slug === slug) as Category | undefined;
@@ -47,16 +47,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-
-
-  const allProducts = (products as Product[]) // Optional type assertion for extra safety
-    .filter((product: Product) => product.category === category.name)
-    // .slice(0, 12);
+  const allProducts = (products as Product[])
+    .filter((product: Product) => product.category === category.name);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
-
       <main className="flex-grow">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="max-w-4xl mb-8">
@@ -106,17 +102,24 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </div>
           )}
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex justify-center gap-4">
             <Link
               href="/categories"
-              className="inline-block px-6 py-3 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 hover:scale-105 transition-all duration-300 shadow-sm"
+              aria-label="Explore more categories"
             >
               Explore More
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-gray-900 rounded-md hover:bg-gray-800 hover:scale-105 transition-all duration-300 shadow-sm"
+              aria-label="Shop all products"
+            >
+              Shop All
             </Link>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

@@ -136,7 +136,7 @@ const FeaturedProducts = () => {
 
         <motion.div className="text-center mt-12" variants={itemVariants}>
           <Link
-            href="/categories"
+            href="/products"
             className="inline-block px-8 py-3 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500 transition-all duration-300 uppercase tracking-wider"
           >
             Shop All Products
