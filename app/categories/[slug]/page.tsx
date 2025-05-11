@@ -5,7 +5,6 @@ import ItemCard from '@/app/(components)/ItemCard';
 import Footer from '@/app/(components)/Footer';
 import Header from '@/app/(components)/Header';
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Category {
   id: number;
