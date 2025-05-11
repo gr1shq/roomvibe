@@ -1,100 +1,156 @@
-// app/(components)/HeroSection.tsx
 'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Define carousel images
+  // Define carousel images with links
   const images = [
     {
       src: '/blog-images/girl-room.webp',
       alt: 'Vibrant gaming setup with RGB LED lights and desk accessories',
+      href: 'https:/roomvibe.vercel.app/vibefeed/20-budget-bedroom-decor-small-spaces-girls-teens-2025', // Links to RGB Mouse Pad
     },
     {
       src: '/blog-images/small-space-decor.jpg',
       alt: 'Cozy bedroom with soft decor and warm LED lighting',
+      href: '/categories/led-paradise', // Links to LED Paradise
     },
     {
       src: '/blog-images/teen-bedroom.jpg',
       alt: 'Minimalist desk setup with sleek decor and LED monitor light',
+      href: '/vibefeed', // Links to LED Strip Lights
     },
   ];
 
   // Set up carousel interval
   useEffect(() => {
     setIsMounted(true);
+    if (isPaused) return;
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000); // Change every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   return (
-    <section className="relative min-h-[60vh] sm:min-h-[70vh] w-full bg-white flex items-center justify-center pt-16 sm:pt-20">
+    <section
+      className="relative min-h-[60vh] sm:min-h-[70vh] w-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center pt-16 sm:pt-20"
+      role="region"
+      aria-label="Hero carousel"
+    >
+      {/* Animated Background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-pink-700 to-purple-700 opacity-50"
+        animate={{ opacity: [0.5, 0.7, 0.5] }}
+        transition={{ duration: 5, repeat: Infinity }}
+      />
+
       {/* Content Container */}
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         {/* Text Content */}
         <div className="max-w-lg text-center md:text-left space-y-6 mt-8 sm:mt-0">
           {/* Main Heading */}
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-900 transition-opacity duration-500 ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white transition-opacity duration-500 ${
               isMounted ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            Create Your Dream Room
+            Create Your Dream Setup
           </h1>
 
           {/* Subheading */}
           <p
-            className={`text-base sm:text-lg md:text-xl text-gray-600 font-light transition-opacity duration-500 ${
+            className={`text-base sm:text-lg md:text-xl text-white font-light transition-opacity duration-500 ${
               isMounted ? 'opacity-100' : 'opacity-0'
             } delay-100`}
           >
-            Shop curated LED lights, cozy decor, and minimal setups to elevate your space.
+            Discover LED lights, gaming gear, and cozy decor to elevate your space.
           </p>
 
-          {/* CTA Button */}
-          <Link
-            href="/categories"
-            className={`inline-block px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-pink-600 text-white text-base sm:text-lg font-semibold hover:bg-pink-500 transition-all duration-300 ${
-              isMounted ? 'opacity-100' : 'opacity-0'
-            } delay-200`}
-          >
-            Explore Products
-          </Link>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Link
+              href="/categories"
+              className={`inline-block px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-pink-600 text-base sm:text-lg font-semibold hover:bg-pink-100 hover:shadow-lg transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+                isMounted ? 'opacity-100' : 'opacity-0'
+              } delay-200`}
+              aria-label="Explore product categories"
+            >
+              Explore Categories
+            </Link>
+            <Link
+              href="/products"
+              className={`inline-block px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-transparent border-2 border-white text-white text-base sm:text-lg font-semibold hover:bg-white hover:text-pink-600 transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+                isMounted ? 'opacity-100' : 'opacity-0'
+              } delay-100`}
+              aria-label="Shop deals under $25"
+            >
+              Shop Deals
+            </Link>
+          </div>
         </div>
 
         {/* Hero Image Carousel */}
-        <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-96 mt-6 md:mt-0">
+        <div
+          className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-96 mt-6 md:mt-0"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div aria-live="polite" className="sr-only">
+            Carousel image {currentImage + 1} of {images.length}: {images[currentImage].alt}
+          </div>
           {images.map((img, index) => (
-            <Image
-              key={img.src}
-              src={img.src}
-              alt={img.alt}
-              fill
-              className={`object-cover rounded-lg shadow-sm transition-opacity duration-1000 ${
-                index === currentImage ? 'opacity-100' : 'opacity-0'
-              } absolute`}
-              quality={85}
-              priority={index === 0} // Priority for first image only
-            />
+            <Link key={img.src} href={img.href} aria-label={`View ${img.alt}`}>
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className={`object-cover rounded-lg shadow-sm transition-opacity duration-1000 ${
+                  index === currentImage ? 'opacity-100' : 'opacity-0'
+                } absolute`}
+                quality={85}
+                priority={index === 0}
+                loading={index === 0 ? undefined : 'lazy'}
+              />
+            </Link>
           ))}
+          {/* Carousel Dots */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImage(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+                  index === currentImage ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
+                }`}
+                aria-label={`Go to carousel image ${index + 1}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    setCurrentImage(index);
+                  }
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div
-        className={`hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-500 ${
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-500 ${
           isMounted ? 'opacity-100' : 'opacity-0'
         } delay-300`}
       >
         <svg
-          className="w-6 h-6 text-gray-600"
+          className="w-6 h-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
