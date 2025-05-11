@@ -19,13 +19,6 @@ interface Product {
   tags?: string[];
 }
 
-interface Category {
-  id: number;
-  name: string;
-  slug: string;
-  image: string;
-  description: string;
-}
 
 // Type assertion to ensure products matches Product[]
 const typedProducts: Product[] = products as Product[];
