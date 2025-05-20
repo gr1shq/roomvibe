@@ -51,11 +51,12 @@ const sortedBlogPosts = [...blogPosts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
 
-export default function VibeFeed({
-  searchParams,
-}: {
-  searchParams: { page?: string };
-}) {
+// Define props interface to fix type error
+interface PageProps {
+  searchParams: { page?: string }; // Type searchParams as a resolved object
+}
+
+export default function VibeFeed({ searchParams }: PageProps) {
   const page = Number(searchParams.page) || 1;
   const postsPerPage = 12;
   const displayedPosts = sortedBlogPosts.slice(0, page * postsPerPage);

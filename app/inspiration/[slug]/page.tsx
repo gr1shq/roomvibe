@@ -57,7 +57,7 @@ interface PageProps {
   searchParams: Promise<{ page?: string }>; // Fix: Type searchParams as a Promise
 }
 
-const VibeFeedPage = ({ searchParams }: PageProps) => {
+const InspirationPage = ({ searchParams }: PageProps) => {
   // Unwrap searchParams (not used in logic to keep backend simple)
   use(searchParams); // Still unwrap to avoid runtime issues
 
@@ -323,4 +323,4 @@ const VibeFeedPage = ({ searchParams }: PageProps) => {
   );
 };
 
-export default VibeFeedPage;
+export default InspirationPage;
