@@ -1,6 +1,5 @@
 "use client";
 
-import { use } from 'react';
 import { notFound } from 'next/navigation';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -10,6 +9,7 @@ import Image from 'next/image';
 import Header from '../../(components)/Header';
 import Footer from '../../(components)/Footer';
 import inspirationCategories from '../../../data/inspiration_categories.json';
+import { use } from 'react';
 
 // Interfaces (same as in inspiration/[slug]/page.tsx)
 interface Room {
@@ -57,18 +57,14 @@ interface PageProps {
   searchParams: Promise<{ page?: string }>; // Fix: Type searchParams as a Promise
 }
 
-export default function VibeFeedPage({ searchParams }: PageProps) {
-  // Unwrap searchParams using React.use
-  const resolvedSearchParams = use(searchParams);
-  const page = parseInt(resolvedSearchParams.page || '1', 10); // Convert to number, default to 1
-  const itemsPerPage = 4; // Fewer items for simplicity
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
+const VibeFeedPage = ({ searchParams }: PageProps) => {
+  // Unwrap searchParams (not used in logic to keep backend simple)
+  use(searchParams); // Still unwrap to avoid runtime issues
 
-  // Paginate categories directly
-  const paginatedCategories = inspirationCategories.slice(start, end) as InspirationCategory[];
+  // Use the first category for simplicity (no pagination)
+  const category = inspirationCategories[0] as InspirationCategory | undefined;
 
-  if (paginatedCategories.length === 0 && page > 1) {
+  if (!category) {
     notFound();
   }
 
@@ -102,10 +98,16 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
   return (
     <div className="min-h-screen bg-white">
       <Head>
-        <title>VibeFeed | RoomVibe</title>
-        <meta name="description" content="Explore inspiring room designs and shop the look." />
-        <meta name="keywords" content="room inspiration, aesthetic decor, cozy room ideas" />
-        <link rel="canonical" href="https://www.roomvibe.vercel.app/vibefeed" />
+        <title>{`${category.name} Inspiration | RoomVibe`}</title>
+        <meta name="description" content={category.style_description.slice(0, 160)} />
+        <meta
+          name="keywords"
+          content={`${category.name.toLowerCase()}, room inspiration, aesthetic decor, cozy room ideas`}
+        />
+        <link
+          rel="canonical"
+          href={`https://www.roomvibe.vercel.app/vibefeed`}
+        />
       </Head>
 
       <Header />
@@ -114,7 +116,7 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
         ref={ref}
         className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16"
       >
-        {/* Title, Metadata, Social Links, and Description */}
+        {/* Title, Metadata, Social Links, and Style Description */}
         <motion.div
           className="flex flex-col gap-6 mb-12 max-w-4xl mx-auto"
           variants={containerVariants}
@@ -125,7 +127,7 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
             className="text-gray-900 font-semibold text-3xl md:text-4xl text-center"
             variants={itemVariants}
           >
-            VibeFeed
+            {category.name}
           </motion.h1>
           <motion.div className="text-sm text-gray-600 text-center" variants={itemVariants}>
             <p>Created by RoomVibe Team</p>
@@ -190,72 +192,56 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
             </Link>
           </motion.div>
           <motion.p
-            className="text-base text-gray-600 text-center"
+            className="text-base text-gray-600"
             variants={itemVariants}
           >
-            Explore inspiring room designs and shop the look.
+            {category.style_description}
           </motion.p>
+          {/* Back to Inspiration Button */}
           <motion.div className="flex justify-center" variants={itemVariants}>
             <Link
-              href="/inspiration"
+              href={category.back_to_inspiration.url}
               className="px-6 py-3 text-base font-medium text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 active:bg-pink-100 transition-all duration-200"
-              aria-label="Back to Inspiration"
+              aria-label={category.back_to_inspiration.title}
             >
-              Back to Inspiration
+              {category.back_to_inspiration.title}
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Inspiration Categories */}
+        {/* Room Sections */}
         <motion.section
           className="space-y-12 max-w-4xl mx-auto"
           variants={containerVariants}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-          aria-label="Inspiration Categories"
+          aria-label="Room Inspiration"
         >
-          {paginatedCategories.map((category) => (
-            <motion.div key={category.id} variants={itemVariants}>
-              {category.rooms[0] && (
-                <div className="relative w-full aspect-[3/4] max-w-2xl mx-auto">
-                  <Image
-                    src={category.rooms[0].image}
-                    alt={category.rooms[0].alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    loading="lazy"
-                  />
-                </div>
-              )}
+          {category.rooms.map((room) => (
+            <motion.div key={room.id} variants={itemVariants}>
+              <div className="relative w-full aspect-[3/4] max-w-2xl mx-auto">
+                <Image
+                  src={room.image}
+                  alt={room.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  loading="lazy"
+                />
+              </div>
               <div className="mt-6">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">{room.title}</h2>
+                <p className="text-base text-gray-600 mb-4">{room.description}</p>
+                <div className="flex items-center gap-4">
+                  <p className="text-base font-medium text-gray-900">{room.product.name}</p>
+                  <p className="text-base text-gray-600">${room.product.price.toFixed(2)}</p>
                   <Link
-                    href={`/inspiration/${category.slug}`}
-                    className="hover:text-pink-600"
+                    href={room.product.affiliate_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-3 py-1 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500"
                   >
-                    {category.name}
+                    Shop Now
                   </Link>
-                </h2>
-                <p className="text-base text-gray-600 mb-4">{category.style_description}</p>
-                {category.rooms[0]?.product && (
-                  <div className="flex items-center gap-4">
-                    <p className="text-base font-medium text-gray-900">
-                      {category.rooms[0].product.name}
-                    </p>
-                    <p className="text-base text-gray-600">
-                      ${category.rooms[0].product.price.toFixed(2)}
-                    </p>
-                    <Link
-                      href={category.rooms[0].product.affiliate_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-3 py-1 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500"
-                    >
-                      Shop Now
-                    </Link>
-                  </div>
-                )}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -265,8 +251,6 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
         <motion.section
           className="mt-12 max-w-4xl mx-auto"
           variants={containerVariants}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
           aria-label="Shop the Look"
         >
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 text-center">
@@ -276,76 +260,67 @@ export default function VibeFeedPage({ searchParams }: PageProps) {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
           >
-            {paginatedCategories
-              .flatMap((category) => category.shop_the_look.slice(0, 1)) // One item per category
-              .slice(0, 4) // Limit to 4 items
-              .map((item) => (
-                <motion.div
-                  key={item.id}
-                  variants={itemVariants}
-                  className="bg-white"
+            {category.shop_the_look.map((item) => (
+              <motion.div
+                key={item.id}
+                variants={itemVariants}
+                className="bg-white"
+              >
+                <Link
+                  href={item.affiliate_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Link
-                    href={item.affiliate_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="relative w-full aspect-square">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-4 text-center">
-                      <h3 className="text-base font-medium text-gray-900 line-clamp-2">
-                        {item.name}
-                      </h3>
-                      <p className="text-base text-gray-600">
-                        ${item.price.toFixed(2)}
-                      </p>
-                      <span className="inline-block mt-2 px-3 py-1 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500">
-                        Shop Now
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
+                  <div className="relative w-full aspect-square">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h3 className="text-base font-medium text-gray-900 line-clamp-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-base text-gray-600">
+                      ${item.price.toFixed(2)}
+                    </p>
+                    <span className="inline-block mt-2 px-3 py-1 text-base font-medium text-white bg-pink-600 rounded-md hover:bg-pink-500">
+                      Shop Now
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.section>
 
-        {/* Pagination Controls */}
-        <motion.div
-          className="flex justify-center gap-4 mt-12"
-          variants={itemVariants}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-        >
-          {page > 1 && (
-            <Link
-              href={`/vibefeed?page=${page - 1}`}
-              className="px-6 py-3 text-base font-medium text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 active:bg-pink-100 transition-all duration-200"
-              aria-label="Previous Page"
-            >
-              Previous
-            </Link>
-          )}
-          {paginatedCategories.length === itemsPerPage && (
-            <Link
-              href={`/vibefeed?page=${page + 1}`}
-              className="px-6 py-3 text-base font-medium text-pink-600 border border-pink-600 rounded-md hover:bg-pink-50 active:bg-pink-100 transition-all duration-200"
-              aria-label="Next Page"
-            >
-              Next
-            </Link>
-          )}
-        </motion.div>
+        {/* Find More Here Link */}
+        {category.find_more && (
+          <motion.section
+            className="mt-12 max-w-4xl mx-auto text-center"
+            variants={itemVariants}
+          >
+            <p className="text-base text-gray-700">
+              Want to learn more?{' '}
+              <Link
+                href={category.find_more.url}
+                className="text-pink-600 hover:underline font-medium"
+                aria-label={category.find_more.title}
+              >
+                {category.find_more.title}
+              </Link>
+            </p>
+          </motion.section>
+        )}
       </main>
 
       <Footer />
     </div>
   );
-}
+};
+
+export default VibeFeedPage;
