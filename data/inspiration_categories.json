@@ -1,0 +1,573 @@
+[
+  {
+    "id": 1,
+    "name": "Boho Bedrooms",
+    "slug": "boho-bedrooms",
+    "image": "/inspiration-images/boho-decor.jpg",
+    "isFeatured": false,
+    "style_description": "Boho Bedrooms capture a free-spirited, eclectic aesthetic that transforms your sleeping space into a cozy, artistic retreat. This style blends earthy tones—terracotta, sage green, warm beige—with layered textiles like macramé wall hangings, fringed throws, and patterned rugs. Natural elements, such as woven seagrass baskets, wooden furniture, and faux greenery, add texture and warmth. Soft lighting, like fairy light curtains or sunset projectors, creates a dreamy ambiance perfect for unwinding. Vibrant accents, such as mustard yellow cushions or teal vases, inject personality, while handmade or thrifted decor pieces add individuality. Ideal for those craving a Pinterest-worthy space that feels relaxed and creatively inspiring, Boho Bedrooms mix patterns, textures, and cultures to craft a unique haven.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Cozy Boho Retreat",
+        "image": "/inspiration-images/boho-room1.webp",
+        "alt": "Boho bedroom with fairy lights and layered textiles",
+        "description": "The Cozy Boho Retreat wraps you in warmth and texture. A plush, neutral-toned bed is piled with knitted throws and patterned pillows in cream, rust, and olive. A Fairy Light Curtain cascades over a sheer canopy, casting a soft glow. A macramé wall hanging anchors the space above the bed, while a thrifted wooden nightstand holds a ceramic vase with dried pampas grass. A woven seagrass rug grounds the room, adding texture underfoot. Walls in warm off-white feature eclectic art prints and a rattan mirror. A faux ivy garland drapes the headboard, bringing nature indoors. Perfect for curling up with a book or meditating.",
+        "product": {
+          "id": 12,
+          "name": "Fairy Light Curtain",
+          "image": "/product-images/fairy-light.webp",
+          "affiliate_url": "https://amzn.to/3GA4BqA",
+          "price": 14.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Earthy Boho Haven",
+        "image": "/inspiration-images/boho-room3.webp",
+        "alt": "Boho bedroom with woven baskets and earthy tones",
+        "description": "The Earthy Boho Haven exudes grounded, natural vibes with organic materials. A low walnut-stained bed frame is dressed in linen bedding in muted sage and terracotta. A woven chandelier diffuses soft light, while seagrass baskets in a corner double as storage and decor. A jute rug adds warmth underfoot, and soft clay-toned walls feature a minimalist shelf with ceramic pots and a succulent. A rattan chair with a fringed throw offers a cozy reading nook. Faux ivy trails from a shelf, adding an earthy touch. This room blends simplicity and warmth, ideal for a nature-inspired aesthetic.",
+        "product": {
+          "id": 28,
+          "name": "Woven Seagrass Basket",
+          "image": "/product-images/basket-plants.webp",
+          "affiliate_url": "https://amzn.to/3YvfZKI",
+          "price": 17.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Dreamy Boho Escape",
+        "image": "/inspiration-images/boho-room4.webp",
+        "alt": "Boho bedroom with sunset lamp and floral accents",
+        "description": "The Dreamy Boho Escape is a whimsical retreat bathed in warm light. A canopy bed with sheer white curtains is adorned with a Pastel Floral Throw Blanket in soft pinks and greens. A Sunset Projector Lamp casts a golden glow, enhancing the room’s cozy vibe. A wooden shelf holds a Faux Cherry Blossom Vase, adding delicate floral charm. A shaggy cream rug softens the floor, while walls in warm beige display woven wall art. A rattan mirror leans against the wall, reflecting light. This room is perfect for a serene, Pinterest-worthy escape.",
+        "product": {
+          "id": 3,
+          "name": "Sunset Projector Lamp",
+          "image": "/product-images/sunset-lamp.webp",
+          "affiliate_url": "https://amzn.to/4jnpzYc",
+          "price": 15.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Eclectic Boho Nook",
+        "image": "/inspiration-images/boho-room5.jpg",
+        "alt": "Boho bedroom with moon lamp and layered textures",
+        "description": "The Eclectic Boho Nook bursts with personality and texture. A low platform bed in deep olive is layered with patterned throws and Mint Green Cushion Covers. A Moon Lamp on a nightstand emits a soft glow, paired with a woven seagrass basket holding extra blankets. A macramé wall hanging in mustard yellow hangs above, while a jute rug adds warmth. Walls in soft terracotta feature a gallery of thrifted art. Faux Ivy Hanging Decor drapes over a shelf, adding greenery. This vibrant nook is ideal for creative souls seeking a cozy retreat.",
+        "product": {
+          "id": 11,
+          "name": "Moon Lamp",
+          "image": "/product-images/moon-lamp.webp",
+          "affiliate_url": "https://amzn.to/3EAp4Lm",
+          "price": 19.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 8,
+        "name": "Faux Ivy Hanging Decor",
+        "image": "/product-images/ivy-decor.jpg",
+        "affiliate_url": "https://amzn.to/4jNwKJ7",
+        "price": 14.49
+      },
+      {
+        "id": 17,
+        "name": "Pastel Floral Throw Blanket",
+        "image": "/product-images/floral-throw.webp",
+        "affiliate_url": "https://amzn.to/3GKDGsf",
+        "price": 24.99
+      },
+      {
+        "id": 26,
+        "name": "Mint Green Cushion Covers",
+        "image": "/product-images/mint-cushion.jpg",
+        "affiliate_url": "https://amzn.to/42Oabyr",
+        "price": 14.99
+      }
+    ],
+    "find_more": {
+      "type": "blog_post",
+      "title": "Read our Boho Decor Guide",
+      "url": "/vibefeed/"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Teen Rooms",
+    "slug": "teen-rooms",
+    "image": "/inspiration-images/teen-bedroom.jpg",
+    "style_description": "Teen Rooms are vibrant, dynamic spaces designed for self-expression and functionality. Bold pops of color—neon pink, electric blue, sunny yellow—mix with modern decor like LED strip lights, sunset projectors, and neon signs to create an Instagram-worthy aesthetic. Cozy essentials, such as plush cushions, fuzzy throws, and bean bags, make the space perfect for lounging, studying, or gaming. Floating shelves display personal touches like vinyl records, polaroid photos, or collectibles, while sleek desks with colorful organizers keep the space functional. Tech-forward elements like galaxy projectors or smart lighting add a youthful, energetic vibe. Whether a chill hangout or creative study nook, Teen Rooms balance style and practicality, letting personality shine.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Vibrant Teen Glow",
+        "image": "/inspiration-images/teen-room1.jpg",
+        "alt": "Teen room with sunset lamp and bold colors",
+        "description": "The Vibrant Teen Glow pulses with energy and color, perfect for creative teens. A sleek white bed is topped with a neon pink duvet and mismatched cushions in turquoise and yellow. A Sunset Projector Lamp casts a warm hue across the wall, creating a lively atmosphere. Floating shelves hold succulents, a Bluetooth speaker, and graphic novels. A glossy black desk is organized with a Pastel Desk Organizer and a neon-lit lamp. A tie-dye shaggy rug adds softness, while LED strip lights outline the bedframe, syncing to music. Bold geometric wallpaper in navy and white features a corkboard with concert tickets. Ideal for studying, gaming, or chilling.",
+        "product": {
+          "id": 3,
+          "name": "Sunset Projector Lamp",
+          "image": "/product-images/sunset-lamp.webp",
+          "affiliate_url": "https://amzn.to/4jnpzYc",
+          "price": 15.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Starry Teen Escape",
+        "image": "/inspiration-images/teen-room-2.jpg",
+        "alt": "Teen room with galaxy projector and cozy decor",
+        "description": "The Starry Teen Escape is a dreamy, tech-savvy retreat. A low platform bed in deep navy with constellation-patterned bedding sits against a charcoal gray wall. A Galaxy Projector spins starry patterns across the ceiling, creating a mesmerizing ambiance. A mint green bean bag is perfect for stargazing or scrolling social media. A minimalist desk holds a laptop, a Neon Heart Sign, and journals. Glow-in-the-dark star decals and polaroid photos on fairy lights adorn the walls. A fluffy pale blue rug ties the space together. This room blends cozy and futuristic vibes for teens craving a magical space.",
+        "product": {
+          "id": 23,
+          "name": "Galaxy Projector",
+          "image": "/product-images/space-projector.webp",
+          "affiliate_url": "https://amzn.to/3EBfrfk",
+          "price": 24.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Cozy Teen Hangout",
+        "image": "/inspiration-images/teen-room-3.jpeg",
+        "alt": "Teen room with fairy light canopy and pastel accents",
+        "description": "The Cozy Teen Hangout is a vibrant yet inviting space for friends and relaxation. A bed with a Fairy Light Canopy is draped in a Pastel Floral Throw Blanket, adding soft pinks and greens. A Peel-and-Stick Floral Wallpaper accent wall creates a trendy focal point. A small desk with a Pastel Desk Organizer holds stationery and a mirror. Floating shelves display vinyl records and fairy light-wrapped photo frames. A shaggy white rug adds warmth, while a neon pink cushion pops against neutral walls. This room is perfect for sleepovers or creative projects.",
+        "product": {
+          "id": 12,
+          "name": "Fairy Light Curtain",
+          "image": "/product-images/fairy-light.webp",
+          "affiliate_url": "https://amzn.to/3GA4BqA",
+          "price": 14.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Bold Teen Vibe",
+        "image": "/inspiration-images/teen-room-4.jpg",
+        "alt": "Teen room with neon sign and photo collage",
+        "description": "The Bold Teen Vibe is all about personality and flair. A platform bed with bright yellow bedding is accented with Mint Green Cushion Covers. A Neon Heart Sign glows above, casting a romantic pink hue. A DIY Photo Collage Wall with washi tape and polaroids adds a personal touch. A sleek desk with an RGB Alarm Clock doubles as a gaming hub. A woven seagrass basket stores extra throws, while a geometric rug in navy ties the room together. White walls keep the space fresh, perfect for a teen’s creative expression.",
+        "product": {
+          "id": 27,
+          "name": "Neon Heart Sign",
+          "image": "/product-images/heart-sign.webp",
+          "affiliate_url": "https://amzn.to/4iEqcLP",
+          "price": 27.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 17,
+        "name": "Pastel Floral Throw Blanket",
+        "image": "/product-images/floral-throw.webp",
+        "affiliate_url": "https://amzn.to/3GKDGsf",
+        "price": 24.99
+      },
+      {
+        "id": 14,
+        "name": "Washi Tape Set",
+        "image": "/product-images/washi-wall-tape.jpg",
+        "affiliate_url": "https://amzn.to/3YNsVvF",
+        "price": 12.49
+      },
+      {
+        "id": 13,
+        "name": "Pastel Desk Organizer",
+        "image": "/product-images/desk-organizer.webp",
+        "affiliate_url": "https://amzn.to/3YsalJa",
+        "price": 16.49
+      }
+    ],
+    "find_more": {
+      "type": "category",
+      "title": "Explore More",
+      "url": "/vibefeed"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Coquette Bedrooms",
+    "slug": "coquette-bedrooms",
+    "image": "/inspiration-images/girl-room.webp",
+    "isFeatured": "true",
+    "style_description": "Coquette Bedrooms embody a romantic, feminine aesthetic that transforms your space into a dreamy, Pinterest-worthy sanctuary. Soft pastels—blush pink, lavender, mint green—blend with luxurious textures like ruffled bedding, velvet headboards, and satin bows. Delicate accents, such as fairy light curtains, neon heart signs, and floral wallpapers, create a whimsical, Instagram-ready vibe. Personal touches like photo collage walls or pastel desk organizers add charm, while plush throws and cushions ensure coziness. Perfect for girls and teens craving a space that feels like a romantic escape, Coquette Bedrooms balance softness and bold personality for a 2025 aesthetic.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Romantic Coquette Haven",
+        "image": "/inspiration-images/coquette-room-1.jpg",
+        "alt": "Coquette bedroom with satin bow and fairy lights",
+        "description": "The Romantic Coquette Haven is a soft, feminine retreat. A bed with a Ruffled Pastel Bedding Set in blush pink is adorned with an Oversized Satin Bow above, creating a romantic focal point. A Fairy Light Curtain cascades behind sheer drapes, casting a twinkling glow. A velvet headboard in lavender adds luxury, while a small desk with a Pastel Desk Organizer holds trinkets. A heart-shaped photo collage with washi tape decorates the wall. A fluffy white rug softens the floor, perfect for a cozy, dreamy escape.",
+        "product": {
+          "id": 15,
+          "name": "Ruffled Pastel Bedding Set",
+          "image": "/product-images/bedding-set.webp",
+          "affiliate_url": "https://amzn.to/4m0HjKS",
+          "price": 39.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Pastel Coquette Glow",
+        "image": "/inspiration-images/coquette-room-2.jpg",
+        "alt": "Coquette bedroom with neon heart and floral wallpaper",
+        "description": "The Pastel Coquette Glow radiates charm and vibrancy. A bed with a Pastel Floral Throw Blanket is set against a Peel-and-Stick Floral Wallpaper accent wall. A Neon Heart Sign in pink glows above, perfect for selfies. Floating shelves display pastel candles and a small mirror. A sleek desk with a Pastel Desk Organizer keeps the space tidy. Mint Green Cushion Covers add a fresh pop on a plush chair. A shaggy lavender rug ties the room together, creating a playful yet cozy vibe.",
+        "product": {
+          "id": 27,
+          "name": "Neon Heart Sign",
+          "image": "/product-images/heart-sign.webp",
+          "affiliate_url": "https://amzn.to/4iEqcLP",
+          "price": 27.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Whimsical Coquette Nook",
+        "image": "/inspiration-images/coquette-room-3.jpg",
+        "alt": "Coquette bedroom with fairy light canopy and pastel decor",
+        "description": "The Whimsical Coquette Nook is a delicate, inviting space. A canopy bed with a Fairy Light Curtain is layered with a Cozy Knit Throw in pastel pink. A velvet headboard in mint green adds softness, while a DIY Tassel Garland in pastel hues drapes across the wall. A small nightstand holds a Moon Lamp, casting a gentle glow. Floating shelves display pastel goth skull planters. A fluffy cream rug and soft lavender walls create a serene, feminine retreat for relaxation.",
+        "product": {
+          "id": 12,
+          "name": "Fairy Light Curtain",
+          "image": "/product-images/fairy-light.webp",
+          "affiliate_url": "https://amzn.to/3GA4BqA",
+          "price": 14.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Chic Coquette Sanctuary",
+        "image": "/inspiration-images/coquette-room-4.jpg",
+        "alt": "Coquette bedroom with sunset lamp and photo collage",
+        "description": "The Chic Coquette Sanctuary blends elegance and playfulness. A bed with a Ruffled Pastel Bedding Set in lavender is accented with a Sunset Projector Lamp, casting a warm glow. A DIY Photo Collage Wall with polaroids and fairy lights adds a personal touch. A velvet chair with Mint Green Cushion Covers sits in a cozy nook. Floating shelves hold a Faux Cherry Blossom Vase. Soft pink walls and a shaggy rug create a luxurious, Instagram-worthy space for teens.",
+        "product": {
+          "id": 3,
+          "name": "Sunset Projector Lamp",
+          "image": "/product-images/sunset-lamp.webp",
+          "affiliate_url": "https://amzn.to/4jnpzYc",
+          "price": 15.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 16,
+        "name": "Oversized Satin Bow Decor",
+        "image": "/product-images/coquette-bow.webp",
+        "affiliate_url": "https://amzn.to/433ap3v",
+        "price": 16.99
+      },
+      {
+        "id": 17,
+        "name": "Pastel Floral Throw Blanket",
+        "image": "/product-images/floral-throw.webp",
+        "affiliate_url": "https://amzn.to/3GKDGsf",
+        "price": 24.99
+      },
+      {
+        "id": 26,
+        "name": "Mint Green Cushion Covers",
+        "image": "/product-images/mint-cushion.jpg",
+        "affiliate_url": "https://amzn.to/42Oabyr",
+        "price": 14.99
+      }
+    ],
+    "find_more": {
+      "type": "blog_post",
+      "title": "Find More Inspiration",
+      "url": "/vibefeed/"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Minimalist Bedrooms",
+    "slug": "minimalist-bedrooms",
+    "image": "/inspiration-images/minimalistic-room.webp",
+    "style_description": "Minimalist Bedrooms offer a serene, clutter-free retreat that emphasizes clean lines, neutral tones, and functional decor. Soft whites, beiges, and grays create a calm backdrop, paired with breathable linen bedding and simple wooden furniture. Subtle accents, like ceramic vases with dried pampas grass or dimmable LED sconces, add warmth without overwhelming the space. Space-saving solutions, such as floating nightstands and under-bed storage baskets, maximize functionality, making this style ideal for small rooms. Perfect for those seeking a peaceful, Pinterest-worthy space in 2025, Minimalist Bedrooms blend simplicity with cozy elegance.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Serene Minimalist Retreat",
+        "image": "/inspiration-images/minimalist-room-1.webp",
+        "alt": "Minimalist bedroom with neutral bedding and floating shelf",
+        "description": "The Serene Minimalist Retreat is a calm, airy space. A bed with a Neutral Linen Bedding Set in soft white is paired with a floating nightstand shelf holding a single candle. A Peel-and-Stick Geometric Wall Decal in monochrome adds a subtle accent to a crisp white wall. A woven rug in beige softens the hardwood floor, while a minimalist wooden chair sits in a corner. Under-bed storage baskets keep clutter hidden. Large windows with sheer curtains let in natural light, creating a peaceful vibe.",
+        "product": {
+          "id": 15,
+          "name": "Neutral Linen Bedding Set",
+          "image": "/product-images/bedding-set.jpg",
+          "affiliate_url": "https://amzn.to/42M4BMV",
+          "price": 39.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Clean Minimalist Haven",
+        "image": "/inspiration-images/minimalist-room-2.webp",
+        "alt": "Minimalist bedroom with woven wall hanging and LED sconce",
+        "description": "The Clean Minimalist Haven focuses on simplicity and warmth. A low bed frame with a Neutral Linen Bedding Set in soft gray is accented by a Woven Wall Hanging in neutral tones above. A Dimmable LED Wall Sconce provides soft, adjustable lighting. A ceramic vase with dried pampas grass sits on a minimalist dresser. Under-bed storage baskets in woven seagrass keep the space tidy. Soft beige walls and a jute rug create a cozy, uncluttered retreat for relaxation.",
+        "product": {
+          "id": 7,
+          "name": "Dimmable LED Wall Sconce",
+          "image": "/product-images/led-wall-sconce.webp",
+          "affiliate_url": "https://amzn.to/4m6eAnU",
+          "price": 29.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Modern Minimalist Escape",
+        "image": "/inspiration-images/minimalist-room-3.jpg",
+        "alt": "Minimalist bedroom with floating nightstand and pampas grass",
+        "description": "The Modern Minimalist Escape is sleek and functional. A bed with a Neutral Linen Bedding Set in beige sits against a soft gray wall with a subtle geometric decal. A Floating Nightstand Shelf holds a small succulent, keeping surfaces clear. A Ceramic Vase with Dried Pampas Grass adds a natural touch on a low dresser. Under-bed storage baskets maximize space, while a woven rug in cream adds texture. Large windows with sheer white curtains enhance the airy, serene vibe.",
+        "product": {
+          "id": 5,
+          "name": "Ceramic Vase with Dried Pampas Grass",
+          "image": "/product-images/pampas-vase.jpg",
+          "affiliate_url": "https://amzn.to/3GKDZmS",
+          "price": 19.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Cozy Minimalist Nook",
+        "image": "/inspiration-images/minimalist-room-4.webp",
+        "alt": "Minimalist bedroom with storage baskets and LED lighting",
+        "description": "The Cozy Minimalist Nook balances warmth and simplicity. A bed with a Neutral Linen Bedding Set in soft white is paired with Under-Bed Storage Baskets in neutral tones. A Dimmable LED Wall Sconce above the bed creates a soft glow. A woven wall hanging adds subtle texture, while a ceramic vase with pampas grass sits on a floating shelf. Soft beige walls and a jute rug keep the space inviting. This small-space-friendly nook is perfect for a clutter-free, calming retreat.",
+        "product": {
+          "id": 6,
+          "name": "Under-Bed Storage Baskets",
+          "image": "/product-images/storage-basket.webp",
+          "affiliate_url": "https://amzn.to/4k0GBeA",
+          "price": 24.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 4,
+        "name": "Woven Wall Hanging",
+        "image": "/product-images/macrame-hanging.webp",
+        "affiliate_url": "https://amzn.to/3F0ctBd",
+        "price": 19.99
+      },
+      {
+        "id": 25,
+        "name": "Floating Shelves",
+        "image": "/product-images/floating-shelv.jpg",
+        "affiliate_url": "https://amzn.to/3GtcmP4",
+        "price": 19.99
+      }
+    ],
+    "find_more": {
+      "type": "category",
+      "title": "Explore More Minimalist Decor",
+      "url": "/vibefeed"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Cherry Red Accents",
+    "slug": "cherry-red-accents",
+    "image": "/inspiration-images/cherry-red-decor.jpg",
+    "style_description": "Cherry Red Accents bring bold, vibrant energy to your room, making a striking statement in 2025. This trendy aesthetic uses cherry red as a focal point—think velvet throw pillows, neon signs, and knit throws—against neutral backdrops like white or gray to balance the intensity. Subtle accents, such as ceramic vases or area rugs, add pops of color, while DIY art or curtain panels infuse personality. Perfect for those who want a cozy yet chic space, Cherry Red Accents create a Pinterest-worthy vibe that’s both modern and inviting, ideal for bedrooms or living areas.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Bold Cherry Glow",
+        "image": "/inspiration-images/cherry-room-1.jpg",
+        "alt": "Room with cherry red neon sign and velvet pillows",
+        "description": "The Bold Cherry Glow is a vibrant, modern space. A bed with neutral white bedding is accented with Cherry Red Velvet Throw Pillows, adding a luxurious pop. A Cherry Red Neon Sign reading ‘Vibe’ glows above, creating a trendy focal point. A sleek white dresser holds a ceramic vase with dried flowers. Soft gray walls balance the boldness, while a woven rug adds texture. Sheer white curtains let in light, making this room a chic, Instagram-ready retreat.",
+        "product": {
+          "id": 22,
+          "name": "Cherry Red Neon Sign",
+          "image": "/product-images/cherry-sign.webp",
+          "affiliate_url": "https://amzn.to/4d1sJyw",
+          "price": 29.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Cozy Cherry Retreat",
+        "image": "/inspiration-images/cherry-red-room-2.webp",
+        "alt": "Room with cherry red throw blanket and vases",
+        "description": "The Cozy Cherry Retreat blends warmth and boldness. A bed with a Cherry Red Knit Throw Blanket drapes over neutral bedding, adding cozy texture. Cherry Red Ceramic Vases with pampas grass sit on floating shelves, creating an elegant accent. A DIY cherry red wall art canvas hangs above the bed, adding an artistic touch. Soft white walls and a jute rug keep the space balanced. This room is perfect for a cozy, trendy vibe with a 2025 aesthetic.",
+        "product": {
+          "id": 21,
+          "name": "Cherry Red Knit Throw Blanket",
+          "image": "/product-images/cherry-red-blanket.webp",
+          "affiliate_url": "https://amzn.to/4jKHQz4",
+          "price": 24.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Chic Cherry Nook",
+        "image": "/inspiration-images/cherry-red-room3.webp",
+        "alt": "Room with cherry red curtain panels and rug",
+        "description": "The Chic Cherry Nook exudes drama and warmth. Cherry Red Curtain Panels frame large windows, adding a bold yet airy vibe. A neutral bed is accented with a Cherry Red Accent Rug in a geometric pattern, grounding the space. Floating shelves hold minimalist decor, while a cherry red vase adds a pop of color. Soft gray walls and a woven chair create a cozy nook, perfect for reading or relaxing in a trendy 2025 setting.",
+        "product": {
+          "id": 7,
+          "name": "Cherry Red Curtain Panels",
+          "image": "/product-images/cherry-red-panels.webp",
+          "affiliate_url": "https://amzn.to/3YzI2sh",
+          "price": 29.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Vibrant Cherry Escape",
+        "image": "/inspiration-images/cherry-red-room-4.jpg",
+        "alt": "Room with cherry red pillows and neon sign",
+        "description": "The Vibrant Cherry Escape is bold and inviting. A bed with Cherry Red Velvet Throw Pillows pops against neutral bedding. A Cherry Red Neon Sign glows above, paired with a DIY cherry red wall art piece. A small desk with a Pastel Desk Organizer adds functionality. A woven rug in cream softens the floor, while soft white walls keep the space fresh. This room is ideal for those craving a vibrant, Pinterest-worthy space.",
+        "product": {
+          "id": 21,
+          "name": "Cherry Red Velvet Throw Pillow",
+          "image": "/product-images/cherry-pillows.webp",
+          "affiliate_url": "https://amzn.to/4jMG0xy",
+          "price": 18.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 5,
+        "name": "Cherry Red Ceramic Vases",
+        "image": "/product-images/cherry-red-vases.webp",
+        "affiliate_url": "https://amzn.to/3EG2Ojr",
+        "price": 19.99
+      },
+      {
+        "id": 7,
+        "name": "Cherry Red Accent Rug",
+        "image": "/product-images/cherry-red-rug.jpg",
+        "affiliate_url": "https://amzn.to/44mCaq9",
+        "price": 29.99
+      }
+    ],
+    "find_more": {
+      "type": "category",
+      "title": "Explore More Cherry Red Decor",
+      "url": "/vibefeed"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Spring Refresh Rooms",
+    "slug": "spring-refresh-rooms",
+    "image": "/inspiration-images/spring-bedroom.jpg",
+    "isNewest": true,
+    "style_description": "Spring Refresh Rooms capture the vibrant, blooming energy of spring 2025, creating fresh, cozy spaces with soft pastels, floral accents, and natural textures. Blush pink, mint green, and lavender hues blend with sheer white curtains, pastel floral throws, and faux cherry blossoms to evoke a breezy, airy vibe. Woven seagrass baskets and watercolor art add charm, while warm fairy lights create a soft glow. Perfect for those seeking a Pinterest-worthy space that feels like a sunny morning, Spring Refresh Rooms bring renewal and warmth to any bedroom or living area.",
+    "rooms": [
+      {
+        "id": 1,
+        "title": "Blossoming Spring Haven",
+        "image": "/inspiration-images/spring-room-1.jpg",
+        "alt": "Spring room with floral throw and fairy lights",
+        "description": "The Blossoming Spring Haven radiates fresh, cozy vibes. A bed with a Pastel Floral Throw Blanket in blush pink is layered with Mint Green Cushion Covers. A Fairy Light Canopy drapes over the bed, adding a soft glow. A Faux Cherry Blossom Vase sits on a nightstand, bringing delicate floral charm. Sheer White Curtain Panels let in natural light, enhancing the airy vibe. Soft lavender walls and a woven rug create a serene, Pinterest-worthy retreat.",
+        "product": {
+          "id": 17,
+          "name": "Pastel Floral Throw Blanket",
+          "image": "/product-images/floral-throw.webp",
+          "affiliate_url": "https://amzn.to/3GKDGsf",
+          "price": 24.99
+        }
+      },
+      {
+        "id": 2,
+        "title": "Airy Spring Escape",
+        "image": "/inspiration-images/spring-room-2.jpg",
+        "alt": "Spring room with cherry blossoms and watercolor art",
+        "description": "The Airy Spring Escape is a light, vibrant space. A bed with a Cozy Knit Throw in pastel pink sits against a soft mint green wall. A Faux Cherry Blossom Vase on a floating shelf adds a floral touch, paired with DIY Watercolor Wall Art in lavender hues. Sheer White Curtain Panels soften the windows, while a woven seagrass basket holds extra throws. A shaggy cream rug adds warmth, creating a fresh, inviting nook for spring 2025.",
+        "product": {
+          "id": 18,
+          "name": "Faux Cherry Blossom Vase",
+          "image": "/product-images/vase-blossoms.webp",
+          "affiliate_url": "https://amzn.to/4m5R8XO",
+          "price": 19.99
+        }
+      },
+      {
+        "id": 3,
+        "title": "Fresh Spring Nook",
+        "image": "/inspiration-images/spring-room-3.webp",
+        "alt": "Spring room with seagrass basket and sheer curtains",
+        "description": "The Fresh Spring Nook is a cozy, natural retreat. A bed with Mint Green Cushion Covers and a Pastel Floral Throw Blanket creates a soft focal point. A Woven Seagrass Basket in a corner holds faux greenery, adding texture. Sheer White Curtain Panels with pastel ribbon ties let in light. A DIY watercolor art piece hangs above the bed, while soft blush pink walls keep the space airy. A jute rug adds warmth, perfect for a spring-inspired sanctuary.",
+        "product": {
+          "id": 28,
+          "name": "Woven Seagrass Basket",
+          "image": "/product-images/basket-plants.webp",
+          "affiliate_url": "https://amzn.to/3YvfZKI",
+          "price": 17.99
+        }
+      },
+      {
+        "id": 4,
+        "title": "Vibrant Spring Glow",
+        "image": "/inspiration-images/spring-room-4.jpg",
+        "alt": "Spring room with fairy light canopy and floral accents",
+        "description": "The Vibrant Spring Glow bursts with seasonal charm. A bed with a Fairy Light Canopy is layered with a Pastel Floral Throw Blanket in mint green. A Faux Cherry Blossom Vase sits on a floating shelf, paired with a small mirror. Sheer White Curtain Panels soften the space, while a DIY watercolor art piece adds an artistic touch. Soft lavender walls and a fluffy white rug create a cozy, Pinterest-worthy vibe for spring 2025.",
+        "product": {
+          "id": 12,
+          "name": "Fairy Light Curtain",
+          "image": "/product-images/fairy-light.webp",
+          "affiliate_url": "https://amzn.to/3GA4BqA",
+          "price": 14.99
+        }
+      }
+    ],
+    "shop_the_look": [
+      {
+        "id": 26,
+        "name": "Mint Green Cushion Covers",
+        "image": "/product-images/mint-cushion.jpg",
+        "affiliate_url": "https://amzn.to/42Oabyr",
+        "price": 14.99
+      },
+      {
+        "id": 21,
+        "name": "Sheer White Curtain Panels",
+        "image": "/product-images/white-curtain-panels.webp",
+        "affiliate_url": "https://amzn.to/3YxJYl7",
+        "price": 19.99
+      },
+      {
+        "id": 20,
+        "name": "DIY Watercolor Wall Art",
+        "image": "/product-images/watercolor-wall-art.jpg",
+        "affiliate_url": "https://amzn.to/4iOOgMl",
+        "price": 14.99
+      }
+    ],
+    "find_more": {
+      "type": "category",
+      "title": "Explore More",
+      "url": "/vibefeed"
+    },
+    "back_to_inspiration": {
+      "title": "Back to Inspiration",
+      "url": "/inspiration"
+    }
+  }
+]
