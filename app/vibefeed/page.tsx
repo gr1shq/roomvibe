@@ -54,7 +54,7 @@ const sortedBlogPosts = [...blogPosts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
 
-export default function VibeFeed({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+export default function VibeFeed({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
   const page = Number(searchParams.page) || 1;
   const postsPerPage = 12;
   const displayedPosts = sortedBlogPosts.slice(0, page * postsPerPage);
