@@ -46,6 +46,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Force server-side rendering
+export const dynamic = 'auto';
+
 // Sort posts server-side (newest first)
 const sortedBlogPosts = [...blogPosts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
