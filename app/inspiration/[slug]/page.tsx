@@ -99,7 +99,7 @@ const typedInspirationCategories: InspirationCategory[] = rawInspirationCategori
 const InspirationPage = ({ params, searchParams }: PageProps) => {
   // Unwrap params and searchParams
   const resolvedParams = use(params);
-  const resolvedSearchParams = use(searchParams);
+//   const resolvedSearchParams = use(searchParams);
 
   // Find category by slug
   const category = typedInspirationCategories.find(
