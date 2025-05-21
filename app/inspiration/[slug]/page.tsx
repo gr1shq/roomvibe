@@ -96,7 +96,7 @@ const typedInspirationCategories: InspirationCategory[] = rawInspirationCategori
   })
 );
 
-const InspirationPage = ({ params, searchParams }: PageProps) => {
+const InspirationPage = ({ params }: PageProps) => {
   // Unwrap params and searchParams
   const resolvedParams = use(params);
 //   const resolvedSearchParams = use(searchParams);
