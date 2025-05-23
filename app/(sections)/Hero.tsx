@@ -15,17 +15,17 @@ const HeroSection = () => {
     {
       src: '/blog-images/girl-room.webp',
       alt: 'Vibrant gaming setup with RGB LED lights and desk accessories',
-      href: 'https:/roomvibe.vercel.app/vibefeed/20-budget-bedroom-decor-small-spaces-girls-teens-2025', // Links to RGB Mouse Pad
+      href: 'https://roomvibe.vercel.app/vibefeed/20-budget-bedroom-decor-small-spaces-girls-teens-2025', // Fixed URL typo
     },
     {
       src: '/blog-images/small-space-decor.jpg',
       alt: 'Cozy bedroom with soft decor and warm LED lighting',
-      href: '/categories/led-paradise', // Links to LED Paradise
+      href: '/categories/led-paradise',
     },
     {
       src: '/blog-images/teen-bedroom.jpg',
       alt: 'Minimalist desk setup with sleek decor and LED monitor light',
-      href: '/vibefeed', // Links to LED Strip Lights
+      href: '/vibefeed',
     },
   ];
 
@@ -37,11 +37,11 @@ const HeroSection = () => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, images.length]);
 
   return (
     <section
-      className="relative min-h-[60vh] sm:min-h-[70vh] w-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center pt-16 sm:pt-20"
+      className="relative min-h-[70vh] sm:min-h-[70vh] w-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center pt-16 sm:pt-20 pb-8"
       role="region"
       aria-label="Hero carousel"
     >
@@ -53,12 +53,12 @@ const HeroSection = () => {
       />
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 relative z-10">
         {/* Text Content */}
-        <div className="max-w-lg text-center md:text-left space-y-6 mt-8 sm:mt-0">
+        <div className="max-w-lg text-center md:text-left space-y-5 md:space-y-6 mt-8 sm:mt-0 order-2 md:order-1">
           {/* Main Heading */}
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white transition-opacity duration-500 ${
+            className={`text-2xl sm:text-4xl md:text-5xl font-bold leading-tight text-white transition-opacity duration-500 ${
               isMounted ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -67,7 +67,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p
-            className={`text-base sm:text-lg md:text-xl text-white font-light transition-opacity duration-500 ${
+            className={`text-sm sm:text-lg md:text-xl text-white font-light transition-opacity duration-500 ${
               isMounted ? 'opacity-100' : 'opacity-0'
             } delay-100`}
           >
@@ -75,10 +75,10 @@ const HeroSection = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
             <Link
               href="/categories"
-              className={`inline-block px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-pink-600 text-base sm:text-lg font-semibold hover:bg-pink-100 hover:shadow-lg transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+              className={`inline-block px-5 sm:px-8 py-2 sm:py-3 rounded-full bg-white text-pink-600 text-sm sm:text-lg font-semibold hover:bg-pink-100 hover:shadow-lg transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
                 isMounted ? 'opacity-100' : 'opacity-0'
               } delay-200`}
               aria-label="Explore product categories"
@@ -87,7 +87,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="/products"
-              className={`inline-block px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-transparent border-2 border-white text-white text-base sm:text-lg font-semibold hover:bg-white hover:text-pink-600 transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+              className={`inline-block px-5 sm:px-8 py-2 sm:py-3 rounded-full bg-transparent border-2 border-white text-white text-sm sm:text-lg font-semibold hover:bg-white hover:text-pink-600 transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
                 isMounted ? 'opacity-100' : 'opacity-0'
               } delay-100`}
               aria-label="Shop deals under $25"
@@ -99,7 +99,7 @@ const HeroSection = () => {
 
         {/* Hero Image Carousel */}
         <div
-          className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-96 mt-6 md:mt-0"
+          className="relative w-full max-w-[90vw] sm:max-w-[70vw] md:w-1/2 h-56 sm:h-80 md:h-96 order-1 md:order-2 md:mt-0"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -122,12 +122,12 @@ const HeroSection = () => {
             </Link>
           ))}
           {/* Carousel Dots */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImage(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
+                className={`w-2.5 md:w-3 h-2.5 md:h-3 rounded-full transition-all duration-300 focus:ring-2 focus:ring-white focus:outline-none ${
                   index === currentImage ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
                 }`}
                 aria-label={`Go to carousel image ${index + 1}`}
@@ -145,12 +145,12 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-500 ${
+        className={`absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-500 hidden md:block ${
           isMounted ? 'opacity-100' : 'opacity-0'
         } delay-300`}
       >
         <svg
-          className="w-6 h-6 text-white"
+          className="w-5 md:w-6 h-5 md:h-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

@@ -24,7 +24,7 @@ const ItemCard = ({ img, title, category, price, amazonLink, aliexpressLink, tem
     />
 
     {/* Content Section */}
-    <div className="pt-3 flex-1 flex flex-col justify-between">
+    <div className="pt-3 flex-1 flex flex-col justify-between m-2">
       <div>
         <h3 className="text-base font-semibold text-gray-800 line-clamp-2">{title}</h3>
         <p className="text-xs text-gray-600 mt-1">{category}</p>

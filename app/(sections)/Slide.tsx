@@ -115,7 +115,7 @@ const FeaturedProducts = () => {
                         Featured Pick
                       </span>
                     )}
-                    <div className="hover:scale-105 transition-transform duration-300 z-10 relative">
+                    <div className="transition-transform duration-300 z-10 relative">
                       <ItemCard
                         img={product.image}
                         title={product.name}
